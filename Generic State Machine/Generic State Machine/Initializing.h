@@ -4,10 +4,13 @@ class Initializing :
 	public EmbeddedSystemXState
 {
 public:
-	Initializing(void);
+	static Initializing* Instance();
 	~Initializing(void);
 	void Initialized() override;
 private:
+	static Initializing* _instance;
 	void startInitializing();
+protected:
+	Initializing(void);
 };
 

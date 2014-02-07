@@ -4,13 +4,15 @@ class Configuration :
 	public Operational
 {
 public:
-	Configuration(void);
+	static Configuration* Instance();
 	~Configuration(void);
 	void ConfigurationEnded(void) override;
+	void ConfigX(void) override;
+	void Restart(void) override;
 private:
+	static Configuration* _instance;
 	void readConfigurationInfo(void);
-public:
-	void ConfigX(void);
-	void Restart(void);
+protected:
+	Configuration(void);
 };
 

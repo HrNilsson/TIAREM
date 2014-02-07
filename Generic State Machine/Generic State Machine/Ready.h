@@ -4,10 +4,14 @@ class Ready :
 	public Operational
 {
 public:
-	Ready(void);
+	static Ready* Instance();
 	~Ready(void);
 	void Restart() override;
 	void Configure() override;
 	void Start() override;
+private:
+	static Ready* _instance;
+protected:
+	Ready(void);
 };
 
