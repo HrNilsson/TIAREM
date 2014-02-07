@@ -37,6 +37,8 @@ void Failure::Restart(EmbeddedSystemX* sys)
 
 void Failure::display()
 {
+	using namespace std;
+	cout << "Something" << endl;
 }
 
 
