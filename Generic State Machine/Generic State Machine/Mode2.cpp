@@ -22,21 +22,21 @@ Mode2::~Mode2(void)
 }
 
 
-void Mode2::chMode()
+void Mode2::chMode(EmbeddedSystemX* sys)
 {
 }
 
 
-void Mode2::eventX()
+void Mode2::eventX(EmbeddedSystemX* sys)
 {
 }
 
 
-void Mode2::eventY()
+void Mode2::eventY(EmbeddedSystemX* sys)
 {
 }
 
 
-void Mode2::Restart()
+void Mode2::Restart(EmbeddedSystemX* sys)
 {
 }

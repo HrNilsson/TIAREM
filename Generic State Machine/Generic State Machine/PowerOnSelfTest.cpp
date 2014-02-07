@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "PowerOnSelfTest.h"
 #include <iostream>
+#include "Failure.h"
+#include "Initializing.h"
+
 
 PowerOnSelfTest* PowerOnSelfTest::_instance = 0;
 
@@ -22,20 +25,24 @@ PowerOnSelfTest::~PowerOnSelfTest(void)
 {
 }
 
-void SelfTestFailed(int ErrorNo)
-{
-}
-
 void PowerOnSelfTest::systemSelfTest(void)
 {
 }
 
 
-void PowerOnSelfTest::SelfTestOk()
+void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* sys)
 {
+	ChangeState(sys, Initializing::Instance());
 }
 
 
-void PowerOnSelfTest::SelfTestFailed()
+void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* sys)
 {
+	ChangeState(sys, Failure::Instance());
+}
+
+
+void PowerOnSelfTest::entry()
+{
+	systemSelfTest();
 }

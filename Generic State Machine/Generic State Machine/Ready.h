@@ -6,9 +6,9 @@ class Ready :
 public:
 	static Ready* Instance();
 	~Ready(void);
-	void Restart() override;
-	void Configure() override;
-	void Start() override;
+	void Restart(EmbeddedSystemX* sys) override;
+	void Configure(EmbeddedSystemX* sys) override;
+	void Start(EmbeddedSystemX* sys) override;
 private:
 	static Ready* _instance;
 protected:

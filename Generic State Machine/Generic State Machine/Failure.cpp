@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Failure.h"
+#include "PowerOnSelfTest.h"
 
 Failure* Failure::_instance = 0;
 
@@ -22,16 +23,24 @@ Failure::~Failure(void)
 }
 
 
-void Failure::Exit()
+void Failure::Exit(EmbeddedSystemX* sys)
 {
+	//Close the program somehow..
 }
 
 
-void Failure::Restart()
+void Failure::Restart(EmbeddedSystemX* sys)
 {
+	ChangeState(sys, PowerOnSelfTest::Instance());
 }
 
 
 void Failure::display()
 {
+}
+
+
+void Failure::entry()
+{
+	display();
 }

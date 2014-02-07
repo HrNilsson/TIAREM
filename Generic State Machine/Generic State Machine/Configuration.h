@@ -6,9 +6,10 @@ class Configuration :
 public:
 	static Configuration* Instance();
 	~Configuration(void);
-	void ConfigurationEnded(void) override;
-	void ConfigX(void) override;
-	void Restart(void) override;
+	void ConfigurationEnded(EmbeddedSystemX* sys) override;
+	void ConfigX(EmbeddedSystemX* sys) override;
+	void Restart(EmbeddedSystemX* sys) override;
+	void entry() override;
 private:
 	static Configuration* _instance;
 	void readConfigurationInfo(void);

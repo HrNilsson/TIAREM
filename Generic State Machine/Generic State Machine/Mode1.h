@@ -6,9 +6,9 @@ class Mode1 :
 public:
 	static Mode1* Instance();
 	~Mode1(void);
-	void chMode() override;
-	void eventX() override;
-	void Restart() override;
+	void chMode(EmbeddedSystemX* sys) override;
+	void eventX(EmbeddedSystemX* sys) override;
+	void Restart(EmbeddedSystemX* sys) override;
 private:
 	static Mode1* _instance;
 protected:

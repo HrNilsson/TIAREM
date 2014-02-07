@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "Suspended.h"
+#include "PowerOnSelfTest.h"
+#include "Ready.h"
+#include "Mode1.h"
 
 Suspended* Suspended::_instance = 0;
 
@@ -22,16 +25,19 @@ Suspended::~Suspended(void)
 }
 
 
-void Suspended::Restart()
+void Suspended::Restart(EmbeddedSystemX* sys)
 {
+	ChangeState(sys, PowerOnSelfTest::Instance());
 }
 
 
-void Suspended::Resume()
+void Suspended::Resume(EmbeddedSystemX* sys)
 {
+	ChangeState(sys, Mode1::Instance());
 }
 
 
-void Suspended::Stop()
+void Suspended::Stop(EmbeddedSystemX* sys)
 {
+	ChangeState(sys, Ready::Instance());
 }

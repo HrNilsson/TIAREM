@@ -11,50 +11,92 @@ EmbeddedSystemXState::~EmbeddedSystemXState(void)
 {
 }
 
-void EmbeddedSystemXState::Initialized(void)
-{}
-
-void EmbeddedSystemXState::Restart(void)
-{}
-
-void EmbeddedSystemXState::Configure(void)
-{}
-
-void EmbeddedSystemXState::ConfigurationEnded(void)
-{}
-
-void EmbeddedSystemXState::Exit(void)
-{}
-
-void EmbeddedSystemXState::Stop(void)
-{}
-
-void EmbeddedSystemXState::Start(void)
-{}
-
-void EmbeddedSystemXState::Suspend(void)
-{}
-
-void EmbeddedSystemXState::Resume(void)
-{}
-
-void EmbeddedSystemXState::ConfigX(void)
-{}
-
-void EmbeddedSystemXState::chMode(void)
-{}
-
-void EmbeddedSystemXState::eventX(void)
-{}
-
-void EmbeddedSystemXState::eventY(void)
-{}
-
-void EmbeddedSystemXState::SelfTestOk()
+void EmbeddedSystemXState::Initialized(EmbeddedSystemX* sys)
 {
+	defaultBehavior();
 }
 
-
-void EmbeddedSystemXState::SelfTestFailed()
+void EmbeddedSystemXState::Restart(EmbeddedSystemX* sys)
 {
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::Configure(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::ConfigurationEnded(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::Exit(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::Stop(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::Start(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::Suspend(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::Resume(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::ConfigX(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::chMode(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::eventX(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::eventY(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::SelfTestOk(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::SelfTestFailed(EmbeddedSystemX* sys)
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::entry()
+{
+	defaultBehavior();
+}
+
+void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState* pS)
+{
+	sys->ChangeState(pS);
+}
+
+void EmbeddedSystemXState::defaultBehavior()
+{
+	// write to the console?
 }

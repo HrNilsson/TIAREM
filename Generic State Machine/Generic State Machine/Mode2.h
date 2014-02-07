@@ -6,10 +6,10 @@ class Mode2 :
 public:
 	static Mode2* Instance();
 	~Mode2(void);
-	void chMode() override;
-	void eventX() override;
-	void eventY() override;
-	void Restart() override;
+	void chMode(EmbeddedSystemX* sys) override;
+	void eventX(EmbeddedSystemX* sys) override;
+	void eventY(EmbeddedSystemX* sys) override;
+	void Restart(EmbeddedSystemX* sys) override;
 private:
 	static Mode2* _instance;
 protected:

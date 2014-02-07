@@ -1,9 +1,13 @@
 #include "stdafx.h"
 #include "EmbeddedSystemX.h"
+#include "PowerOnSelfTest.h"
 
+EmbeddedSystemXState* _state;
 
 EmbeddedSystemX::EmbeddedSystemX(void)
 {
+	_state = PowerOnSelfTest::Instance();
+	_state->entry();
 }
 
 
@@ -72,6 +76,8 @@ void EmbeddedSystemX::eventY(void)
 }
 
 
-//void ChangeState(EmbeddedSystemXState*)
-//{
-//}
+void EmbeddedSystemX::ChangeState(EmbeddedSystemXState* pS)
+{
+	_state = pS;
+	//_state->entry(this);
+}

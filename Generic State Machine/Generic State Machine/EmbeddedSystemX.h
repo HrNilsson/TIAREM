@@ -1,5 +1,7 @@
 #pragma once
-using namespace std;
+//#include "EmbeddedSystemXState.h"
+
+//using namespace std;
 
 class EmbeddedSystemX
 {
@@ -21,11 +23,12 @@ public:
 	void chMode(void);
 	void eventX(void);
 	void eventY(void);
-	/*
 private:
 	friend class EmbeddedSystemXState;
 	void ChangeState(EmbeddedSystemXState*);
-	EmbeddedSystemXState* _state;*/
+	EmbeddedSystemXState* _state;
+	int VersionNo;
+	char* Name;
 
 };
 

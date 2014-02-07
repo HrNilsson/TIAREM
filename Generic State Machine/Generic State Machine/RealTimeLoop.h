@@ -6,8 +6,5 @@ class RealTimeLoop :
 public:
 	RealTimeLoop(void);
 	~RealTimeLoop(void);
-	void Restart() override;
-	void Suspend() override;
-	void Stop() override;
 };
 

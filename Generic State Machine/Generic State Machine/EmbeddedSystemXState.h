@@ -1,30 +1,33 @@
 #pragma once
 #include <iostream>
+#include "EmbeddedSystemX.h"
 
-using namespace std;
+//using namespace std;
 
 class EmbeddedSystemXState
 {
 public:
 	~EmbeddedSystemXState(void);
-	virtual void Initialized(void);
-	virtual void Restart(void);
-	virtual void Configure(void);
-	virtual void ConfigurationEnded(void);
-	virtual void Exit(void);
-	virtual void Stop(void);
-	virtual void Start(void);
-	virtual void Suspend(void);
-	virtual void Resume(void);
-	virtual void ConfigX(void);
-	virtual void chMode(void);
-	virtual void eventX(void);
-	virtual void eventY(void);
-
+	virtual void Initialized(EmbeddedSystemX* sys);
+	virtual void Restart(EmbeddedSystemX* sys);
+	virtual void Configure(EmbeddedSystemX* sys);
+	virtual void ConfigurationEnded(EmbeddedSystemX* sys);
+	virtual void Exit(EmbeddedSystemX* sys);
+	virtual void Stop(EmbeddedSystemX* sys);
+	virtual void Start(EmbeddedSystemX* sys);
+	virtual void Suspend(EmbeddedSystemX* sys);
+	virtual void Resume(EmbeddedSystemX* sys);
+	virtual void ConfigX(EmbeddedSystemX* sys);
+	virtual void chMode(EmbeddedSystemX* sys);
+	virtual void eventX(EmbeddedSystemX* sys);
+	virtual void eventY(EmbeddedSystemX* sys);
+	virtual void SelfTestOk(EmbeddedSystemX* sys);
+	virtual void SelfTestFailed(EmbeddedSystemX* sys);
+	virtual void entry();
+private:
+	void defaultBehavior();
 protected:
 	EmbeddedSystemXState(void);
-public:
-	virtual void SelfTestOk();
-	virtual void SelfTestFailed();
+	void ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState*);
 };
 

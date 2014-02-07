@@ -6,6 +6,5 @@ class Operational :
 public:
 	Operational(void);
 	~Operational(void);
-	void Restart() override;
 };
 

@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Initializing.h"
+#include "Ready.h"
 
 Initializing* Initializing::_instance = 0;
 
@@ -22,11 +23,18 @@ Initializing::~Initializing(void)
 }
 
 
-void Initializing::Initialized()
+void Initializing::Initialized(EmbeddedSystemX* sys)
 {
+	ChangeState(sys, Ready::Instance());
 }
 
 
 void Initializing::startInitializing()
 {
+}
+
+
+void Initializing::entry()
+{
+	startInitializing();
 }

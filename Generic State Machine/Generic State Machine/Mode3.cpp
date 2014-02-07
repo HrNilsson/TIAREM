@@ -22,16 +22,16 @@ Mode3::~Mode3(void)
 }
 
 
-void Mode3::Restart()
+void Mode3::Restart(EmbeddedSystemX* sys)
 {
 }
 
 
-void Mode3::chMode()
+void Mode3::chMode(EmbeddedSystemX* sys)
 {
 }
 
 
-void Mode3::eventX()
+void Mode3::eventX(EmbeddedSystemX* sys)
 {
 }

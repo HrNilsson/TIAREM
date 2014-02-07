@@ -10,8 +10,3 @@ Operational::Operational(void)
 Operational::~Operational(void)
 {
 }
-
-
-void Operational::Restart()
-{
-}
