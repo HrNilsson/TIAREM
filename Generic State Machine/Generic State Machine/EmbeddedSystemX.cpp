@@ -4,7 +4,6 @@
 
 EmbeddedSystemX::EmbeddedSystemX(void)
 {
-	_state = PowerOnSelfTest
 }
 
 
@@ -12,7 +11,7 @@ EmbeddedSystemX::~EmbeddedSystemX(void)
 {
 }
 
-void EmbeddedSystemX::SelftestOk(void)
+void EmbeddedSystemX::SelfTestOk(void)
 {
 }
 
@@ -73,6 +72,6 @@ void EmbeddedSystemX::eventY(void)
 }
 
 
-void ChangeState(EmbeddedSystemXState*)
-{
-}
+//void ChangeState(EmbeddedSystemXState*)
+//{
+//}

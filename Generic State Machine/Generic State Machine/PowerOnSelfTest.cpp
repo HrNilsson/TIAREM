@@ -13,19 +13,20 @@ PowerOnSelfTest::~PowerOnSelfTest(void)
 {
 }
 
-
-void SelfTestOk(void)
+void SelfTestFailed(int ErrorNo)
 {
-	cout << "Self Test Ok" << endl;
+}
+
+void PowerOnSelfTest::systemSelfTest(void)
+{
 }
 
 
-void SelfTestFailed(void)
+void PowerOnSelfTest::SelfTestOk()
 {
-	cout << "Self Test Failed" << endl;
 }
 
-void PowerOnSelfTest::SystemSelfTest(void)
+
+void PowerOnSelfTest::SelfTestFailed()
 {
-	cout << "System Self Test" << endl;
 }

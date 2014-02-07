@@ -7,23 +7,24 @@ class EmbeddedSystemXState
 {
 public:
 	~EmbeddedSystemXState(void);
-	void SelftestOk(void);
-	void Initialized(void);
-	void Restart(void);
-	void Configure(void);
-	void ConfigurationEnded(void);
-	void Exit(void);
-	void Stop(void);
-	void Start(void);
-	void Supend(void);
-	void Resume(void);
-	void SelfTestFailed(int ErrorNo);
-	void ConfigX(void);
-	void chMode(void);
-	void eventX(void);
-	void eventY(void);
+	virtual void Initialized(void);
+	virtual void Restart(void);
+	virtual void Configure(void);
+	virtual void ConfigurationEnded(void);
+	virtual void Exit(void);
+	virtual void Stop(void);
+	virtual void Start(void);
+	virtual void Suspend(void);
+	virtual void Resume(void);
+	virtual void ConfigX(void);
+	virtual void chMode(void);
+	virtual void eventX(void);
+	virtual void eventY(void);
 
 protected:
 	EmbeddedSystemXState(void);
+public:
+	virtual void SelfTestOk();
+	virtual void SelfTestFailed();
 };
 

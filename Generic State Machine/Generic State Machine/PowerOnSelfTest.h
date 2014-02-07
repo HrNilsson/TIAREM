@@ -4,14 +4,11 @@ class PowerOnSelfTest :
 	public EmbeddedSystemXState
 {
 public:
-	~PowerOnSelfTest(void);
-	void SelfTestOk(void);
-	void SelfTestFailed(void);
-
-protected:
 	PowerOnSelfTest(void);
-
+	~PowerOnSelfTest(void);
+	void SelfTestOk() override;
+	void SelfTestFailed() override;
 private:
-	void SystemSelfTest(void);
+	void systemSelfTest(void);
 };
 

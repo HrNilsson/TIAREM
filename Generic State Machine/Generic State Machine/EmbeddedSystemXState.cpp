@@ -11,10 +11,6 @@ EmbeddedSystemXState::~EmbeddedSystemXState(void)
 {
 }
 
-
-void EmbeddedSystemXState::SelftestOk(void)
-{}
-
 void EmbeddedSystemXState::Initialized(void)
 {}
 
@@ -36,13 +32,10 @@ void EmbeddedSystemXState::Stop(void)
 void EmbeddedSystemXState::Start(void)
 {}
 
-void EmbeddedSystemXState::Supend(void)
+void EmbeddedSystemXState::Suspend(void)
 {}
 
 void EmbeddedSystemXState::Resume(void)
-{}
-
-void EmbeddedSystemXState::SelfTestFailed(int ErrorNo)
 {}
 
 void EmbeddedSystemXState::ConfigX(void)
@@ -56,3 +49,12 @@ void EmbeddedSystemXState::eventX(void)
 
 void EmbeddedSystemXState::eventY(void)
 {}
+
+void EmbeddedSystemXState::SelfTestOk()
+{
+}
+
+
+void EmbeddedSystemXState::SelfTestFailed()
+{
+}

@@ -6,5 +6,8 @@ class Initializing :
 public:
 	Initializing(void);
 	~Initializing(void);
+	void Initialized() override;
+private:
+	void startInitializing();
 };
 

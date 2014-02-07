@@ -6,5 +6,8 @@ class Ready :
 public:
 	Ready(void);
 	~Ready(void);
+	void Restart() override;
+	void Configure() override;
+	void Start() override;
 };
 

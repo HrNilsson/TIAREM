@@ -6,5 +6,8 @@ class Mode1 :
 public:
 	Mode1(void);
 	~Mode1(void);
+	void chMode() override;
+	void eventX() override;
+	void Restart() override;
 };
 

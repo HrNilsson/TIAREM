@@ -1,10 +1,12 @@
 #pragma once
+using namespace std;
+
 class EmbeddedSystemX
 {
 public:
 	EmbeddedSystemX(void);
 	~EmbeddedSystemX(void);
-	void SelftestOk(void);
+	void SelfTestOk(void);
 	void Initialized(void);
 	void Restart(void);
 	void Configure(void);
@@ -19,11 +21,11 @@ public:
 	void chMode(void);
 	void eventX(void);
 	void eventY(void);
-
+	/*
 private:
 	friend class EmbeddedSystemXState;
 	void ChangeState(EmbeddedSystemXState*);
-	EmbeddedSystemXState* _state;
+	EmbeddedSystemXState* _state;*/
 
 };
 

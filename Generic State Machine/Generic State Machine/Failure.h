@@ -6,5 +6,9 @@ class Failure :
 public:
 	Failure(void);
 	~Failure(void);
+	void Exit() override;
+	void Restart() override;
+private:
+	void display();
 };
 
