@@ -25,7 +25,8 @@ Failure::~Failure(void)
 
 void Failure::Exit(EmbeddedSystemX* sys)
 {
-	//Close the program somehow..
+	using namespace std;
+	cout << "Exit - Program should end here?" << endl;
 }
 
 
@@ -38,11 +39,13 @@ void Failure::Restart(EmbeddedSystemX* sys)
 void Failure::display()
 {
 	using namespace std;
-	cout << "Something" << endl;
+	cout << "Displaying ErrorNo..." << endl;
 }
 
 
 void Failure::entry()
 {
+	using namespace std;
+	cout << "Failure state entered." << endl;
 	display();
 }

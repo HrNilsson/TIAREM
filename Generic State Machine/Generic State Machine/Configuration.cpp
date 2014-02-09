@@ -32,21 +32,21 @@ void Configuration::ConfigurationEnded(EmbeddedSystemX* sys)
 
 void Configuration::readConfigurationInfo()
 {
+	using namespace std;
+	cout << "Reading Configuration Info." << endl;
 }
 
 
 void Configuration::ConfigX(EmbeddedSystemX* sys)
 {
-}
-
-
-void Configuration::Restart(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, PowerOnSelfTest::Instance());
+	using namespace std;
+	cout << "PerformConfigurationX" << endl;
 }
 
 
 void Configuration::entry()
 {
+	using namespace std;
+	cout << "Configuration state entered." << endl;
 	readConfigurationInfo();
 }

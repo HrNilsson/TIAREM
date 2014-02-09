@@ -25,12 +25,6 @@ Ready::~Ready(void)
 }
 
 
-void Ready::Restart(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, PowerOnSelfTest::Instance());
-}
-
-
 void Ready::Configure(EmbeddedSystemX* sys)
 {
 	ChangeState(sys, Configuration::Instance());
@@ -40,4 +34,10 @@ void Ready::Configure(EmbeddedSystemX* sys)
 void Ready::Start(EmbeddedSystemX* sys)
 {
 	ChangeState(sys, Mode1::Instance());
+}
+
+void Ready::entry()
+{
+	using namespace std;
+	cout << "Ready state entered." << endl;
 }

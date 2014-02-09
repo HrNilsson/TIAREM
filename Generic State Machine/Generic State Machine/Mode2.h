@@ -9,7 +9,7 @@ public:
 	void chMode(EmbeddedSystemX* sys) override;
 	void eventX(EmbeddedSystemX* sys) override;
 	void eventY(EmbeddedSystemX* sys) override;
-	void Restart(EmbeddedSystemX* sys) override;
+	void entry() override;
 private:
 	static Mode2* _instance;
 protected:

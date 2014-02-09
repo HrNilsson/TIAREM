@@ -98,5 +98,6 @@ void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXStat
 
 void EmbeddedSystemXState::defaultBehavior()
 {
-	// write to the console?
+	using namespace std;
+	cout << "The action is not defined in this state." << endl;
 }

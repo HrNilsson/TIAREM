@@ -25,12 +25,6 @@ Suspended::~Suspended(void)
 }
 
 
-void Suspended::Restart(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, PowerOnSelfTest::Instance());
-}
-
-
 void Suspended::Resume(EmbeddedSystemX* sys)
 {
 	ChangeState(sys, Mode1::Instance());
@@ -40,4 +34,10 @@ void Suspended::Resume(EmbeddedSystemX* sys)
 void Suspended::Stop(EmbeddedSystemX* sys)
 {
 	ChangeState(sys, Ready::Instance());
+}
+
+void Suspended::entry()
+{
+	using namespace std;
+	cout << "Suspended state entered." << endl;
 }

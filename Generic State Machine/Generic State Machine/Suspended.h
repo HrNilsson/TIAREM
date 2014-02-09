@@ -6,9 +6,9 @@ class Suspended :
 public:
 	static Suspended* Instance();
 	~Suspended(void);
-	void Restart(EmbeddedSystemX* sys) override;
 	void Resume(EmbeddedSystemX* sys) override;
 	void Stop(EmbeddedSystemX* sys) override;
+	void entry() override;
 private:
 	static Suspended* _instance;
 protected:

@@ -8,7 +8,6 @@ public:
 	~Configuration(void);
 	void ConfigurationEnded(EmbeddedSystemX* sys) override;
 	void ConfigX(EmbeddedSystemX* sys) override;
-	void Restart(EmbeddedSystemX* sys) override;
 	void entry() override;
 private:
 	static Configuration* _instance;

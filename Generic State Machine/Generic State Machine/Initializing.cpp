@@ -31,10 +31,15 @@ void Initializing::Initialized(EmbeddedSystemX* sys)
 
 void Initializing::startInitializing()
 {
+	using namespace std;
+	cout << "Start initializing." << endl;
 }
 
 
 void Initializing::entry()
 {
+	using namespace std;
+	cout << "Initializing state entered." << endl;
 	startInitializing();
 }
+

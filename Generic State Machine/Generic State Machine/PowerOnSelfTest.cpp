@@ -27,6 +27,8 @@ PowerOnSelfTest::~PowerOnSelfTest(void)
 
 void PowerOnSelfTest::systemSelfTest(void)
 {
+	using namespace std;
+	cout << "Running system self test." << endl;
 }
 
 
@@ -44,5 +46,7 @@ void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* sys)
 
 void PowerOnSelfTest::entry()
 {
+	using namespace std;
+	cout << "PowerOnSelfTest state entered." << endl;
 	systemSelfTest();
 }
