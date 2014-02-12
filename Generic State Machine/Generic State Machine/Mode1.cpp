@@ -1,8 +1,5 @@
 #include "stdafx.h"
 #include "Mode1.h"
-#include "PowerOnSelfTest.h"
-#include "Suspended.h"
-#include "Ready.h"
 #include "Mode2.h"
 
 Mode1* Mode1::_instance = 0;
@@ -34,12 +31,10 @@ void Mode1::chMode(EmbeddedSystemX* sys)
 
 void Mode1::eventX(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Running ResponseM1eventX" << endl;
+	sys->responseM1eventX();
 }
 
-void Mode1::entry()
+void Mode1::entry(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Mode1 state entered." << endl;
+	sys->display("Mode1 state entered.");
 }

@@ -8,7 +8,7 @@ public:
 	~Suspended(void);
 	void Resume(EmbeddedSystemX* sys) override;
 	void Stop(EmbeddedSystemX* sys) override;
-	void entry() override;
+	void entry(EmbeddedSystemX* sys) override;
 private:
 	static Suspended* _instance;
 protected:

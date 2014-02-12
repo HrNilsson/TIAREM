@@ -8,10 +8,9 @@ public:
 	~Configuration(void);
 	void ConfigurationEnded(EmbeddedSystemX* sys) override;
 	void ConfigX(EmbeddedSystemX* sys) override;
-	void entry() override;
+	void entry(EmbeddedSystemX* sys) override;
 private:
 	static Configuration* _instance;
-	void readConfigurationInfo(void);
 protected:
 	Configuration(void);
 };

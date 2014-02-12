@@ -8,7 +8,7 @@ public:
 	~Ready(void);
 	void Configure(EmbeddedSystemX* sys) override;
 	void Start(EmbeddedSystemX* sys) override;
-	void entry() override;
+	void entry(EmbeddedSystemX* sys) override;
 private:
 	static Ready* _instance;
 protected:

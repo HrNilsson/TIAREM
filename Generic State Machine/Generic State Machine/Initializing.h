@@ -7,10 +7,9 @@ public:
 	static Initializing* Instance();
 	~Initializing(void);
 	void Initialized(EmbeddedSystemX* sys) override;
-	void entry() override;
+	void entry(EmbeddedSystemX* sys) override;
 private:
 	static Initializing* _instance;
-	void startInitializing();
 protected:
 	Initializing(void);
 };

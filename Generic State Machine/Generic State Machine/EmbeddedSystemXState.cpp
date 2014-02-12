@@ -13,82 +13,82 @@ EmbeddedSystemXState::~EmbeddedSystemXState(void)
 
 void EmbeddedSystemXState::Initialized(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::Restart(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::Configure(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::ConfigurationEnded(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::Exit(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::Stop(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::Start(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::Suspend(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::Resume(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::ConfigX(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::chMode(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::eventX(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::eventY(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
 void EmbeddedSystemXState::SelfTestOk(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
-void EmbeddedSystemXState::SelfTestFailed(EmbeddedSystemX* sys)
+void EmbeddedSystemXState::SelfTestFailed(EmbeddedSystemX* sys, int ErrorNo)
 {
-	defaultBehavior();
+	defaultBehavior(sys);
 }
 
-void EmbeddedSystemXState::entry()
+void EmbeddedSystemXState::entry(EmbeddedSystemX* sys)
 {
-	defaultBehavior();
+	
 }
 
 void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState* pS)
@@ -96,8 +96,7 @@ void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXStat
 	sys->ChangeState(pS);
 }
 
-void EmbeddedSystemXState::defaultBehavior()
+void EmbeddedSystemXState::defaultBehavior(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "The action is not defined in this state." << endl;
+	sys->display("The action is not defined in this state.");
 }

@@ -25,27 +25,11 @@ Failure::~Failure(void)
 
 void Failure::Exit(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Exit - Program should end here?" << endl;
+	sys->exitStateMachine();
 }
 
 
 void Failure::Restart(EmbeddedSystemX* sys)
 {
 	ChangeState(sys, PowerOnSelfTest::Instance());
-}
-
-
-void Failure::display()
-{
-	using namespace std;
-	cout << "Displaying ErrorNo..." << endl;
-}
-
-
-void Failure::entry()
-{
-	using namespace std;
-	cout << "Failure state entered." << endl;
-	display();
 }

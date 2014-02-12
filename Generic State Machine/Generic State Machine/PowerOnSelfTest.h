@@ -10,11 +10,10 @@ public:
 	static PowerOnSelfTest* Instance();
 	~PowerOnSelfTest(void);
 	void SelfTestOk(EmbeddedSystemX* sys) override;
-	void SelfTestFailed(EmbeddedSystemX* sys) override;
-	void entry() override;
+	void SelfTestFailed(EmbeddedSystemX* sys, int ErrorNo) override;
+	void entry(EmbeddedSystemX* sys) override;
 private:
 	static PowerOnSelfTest* _instance;
-	void systemSelfTest(void);
 protected:
 	PowerOnSelfTest(void);
 };

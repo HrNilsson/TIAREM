@@ -40,7 +40,9 @@ int _tmain(int argc, _TCHAR* argv[])
 			sys.SelfTestOk();
 			break;
 		case 2:
-			sys.SelfTestFailed(12);
+			cout << "Please enter error number: ";
+			cin >> i;
+			sys.SelfTestFailed(i);
 			break;
 		case 3:
 			sys.Initialized();

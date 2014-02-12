@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Configuration.h"
 #include "Ready.h"
-#include "PowerOnSelfTest.h"
 
 Configuration* Configuration::_instance = 0;
 
@@ -30,23 +29,14 @@ void Configuration::ConfigurationEnded(EmbeddedSystemX* sys)
 }
 
 
-void Configuration::readConfigurationInfo()
-{
-	using namespace std;
-	cout << "Reading Configuration Info." << endl;
-}
-
-
 void Configuration::ConfigX(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "PerformConfigurationX" << endl;
+	sys->PerformConfigurationX();
 }
 
 
-void Configuration::entry()
+void Configuration::entry(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Configuration state entered." << endl;
-	readConfigurationInfo();
+	sys->display("Configuration state entered.");
+	sys->readConfigurationInfo();
 }

@@ -1,8 +1,5 @@
 #include "stdafx.h"
 #include "Mode3.h"
-#include "PowerOnSelfTest.h"
-#include "Suspended.h"
-#include "Ready.h"
 #include "Mode1.h"
 
 Mode3* Mode3::_instance = 0;
@@ -32,12 +29,10 @@ void Mode3::chMode(EmbeddedSystemX* sys)
 
 void Mode3::eventX(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Running ResponseM3eventX" << endl;
+	sys->responseM3eventX();
 }
 
-void Mode3::entry()
+void Mode3::entry(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Mode3 state entered." << endl;
+	sys->display("Mode3 state entered.");
 }

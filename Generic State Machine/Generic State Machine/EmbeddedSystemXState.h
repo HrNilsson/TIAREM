@@ -22,10 +22,10 @@ public:
 	virtual void eventX(EmbeddedSystemX* sys);
 	virtual void eventY(EmbeddedSystemX* sys);
 	virtual void SelfTestOk(EmbeddedSystemX* sys);
-	virtual void SelfTestFailed(EmbeddedSystemX* sys);
-	virtual void entry();
+	virtual void SelfTestFailed(EmbeddedSystemX* sys, int ErrorNo);
+	virtual void entry(EmbeddedSystemX* sys);
 private:
-	void defaultBehavior();
+	void defaultBehavior(EmbeddedSystemX* sys);
 protected:
 	EmbeddedSystemXState(void);
 	void ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState*);

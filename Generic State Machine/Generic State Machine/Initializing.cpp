@@ -29,17 +29,9 @@ void Initializing::Initialized(EmbeddedSystemX* sys)
 }
 
 
-void Initializing::startInitializing()
+void Initializing::entry(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Start initializing." << endl;
-}
-
-
-void Initializing::entry()
-{
-	using namespace std;
-	cout << "Initializing state entered." << endl;
-	startInitializing();
+	sys->display("Initializing state entered.");
+	sys->startInitializing();
 }
 

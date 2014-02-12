@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "PowerOnSelfTest.h"
-#include <iostream>
 #include "Failure.h"
 #include "Initializing.h"
 
@@ -25,12 +24,6 @@ PowerOnSelfTest::~PowerOnSelfTest(void)
 {
 }
 
-void PowerOnSelfTest::systemSelfTest(void)
-{
-	using namespace std;
-	cout << "Running system self test." << endl;
-}
-
 
 void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* sys)
 {
@@ -38,15 +31,15 @@ void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX* sys)
 }
 
 
-void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* sys)
+void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* sys, int ErrorNo)
 {
+	sys->display(ErrorNo);
 	ChangeState(sys, Failure::Instance());
 }
 
 
-void PowerOnSelfTest::entry()
+void PowerOnSelfTest::entry(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "PowerOnSelfTest state entered." << endl;
-	systemSelfTest();
+	sys->display("PowerOnSelfTest state entered.");
+	sys->systemSelfTest();
 }

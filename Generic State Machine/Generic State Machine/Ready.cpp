@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Ready.h"
-#include "PowerOnSelfTest.h"
 #include "Mode1.h"
 #include "Configuration.h"
 
@@ -36,8 +35,7 @@ void Ready::Start(EmbeddedSystemX* sys)
 	ChangeState(sys, Mode1::Instance());
 }
 
-void Ready::entry()
+void Ready::entry(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Ready state entered." << endl;
+	sys->display("Ready state entered.");
 }

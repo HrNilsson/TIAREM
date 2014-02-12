@@ -8,7 +8,7 @@ public:
 	~Mode3(void);
 	void chMode(EmbeddedSystemX* sys) override;
 	void eventX(EmbeddedSystemX* sys) override;
-	void entry() override;
+	void entry(EmbeddedSystemX* sys) override;
 private:
 	static Mode3* _instance;
 protected:

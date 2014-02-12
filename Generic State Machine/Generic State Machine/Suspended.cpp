@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Suspended.h"
-#include "PowerOnSelfTest.h"
 #include "Ready.h"
 #include "Mode1.h"
 
@@ -36,8 +35,7 @@ void Suspended::Stop(EmbeddedSystemX* sys)
 	ChangeState(sys, Ready::Instance());
 }
 
-void Suspended::entry()
+void Suspended::entry(EmbeddedSystemX* sys)
 {
-	using namespace std;
-	cout << "Suspended state entered." << endl;
+	sys->display("Suspended state entered.");
 }
