@@ -2,12 +2,10 @@
 #include <iostream>
 #include "EmbeddedSystemX.h"
 
-//using namespace std;
-
 class EmbeddedSystemXState
 {
 public:
-	~EmbeddedSystemXState(void);
+	virtual ~EmbeddedSystemXState(void);
 	virtual void Initialized(EmbeddedSystemX* sys);
 	virtual void Restart(EmbeddedSystemX* sys);
 	virtual void Configure(EmbeddedSystemX* sys);

@@ -4,6 +4,21 @@
 #include "stdafx.h"
 #include <iostream>
 #include "EmbeddedSystemX.h"
+#include "chMode.h"
+#include "ConfigurationEnded.h"
+#include "Configure.h"
+#include "ConfigX.h"
+#include "eventX.h"
+#include "eventY.h"
+#include "Exit.h"
+#include "Initialized.h"
+#include "Restart.h"
+#include "Resume.h"
+#include "SelfTestFailed.h"
+#include "SelfTestOk.h"
+#include "Start.h"
+#include "Stop.h"
+#include "Suspend.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -37,57 +52,56 @@ int _tmain(int argc, _TCHAR* argv[])
 		switch (i)
 		{
 		case 1:
-			sys.SelfTestOk();
+			sys.handleCommand(new SelfTestOk());
 			break;
 		case 2:
 			cout << "Please enter error number: ";
 			cin >> i;
-			sys.SelfTestFailed(i);
+			sys.handleCommand(new SelfTestFailed(i));
 			break;
 		case 3:
-			sys.Initialized();
+			sys.handleCommand(new Initialized());
 			break;
 		case 4:
-			sys.Restart();
+			sys.handleCommand(new Restart());
 			break;
 		case 5:
-			sys.Exit();
+			sys.handleCommand(new Exit());
 			break;
 		case 6:
-			sys.Start();
+			sys.handleCommand(new Start());
 			break;
 		case 7:
-			sys.Stop();
+			sys.handleCommand(new Stop());
 			break;
 		case 8:
-			sys.Configure();
+			sys.handleCommand(new Configure());
 			break;
 		case 9:
-			sys.ConfigurationEnded();
+			sys.handleCommand(new ConfigurationEnded());
 			break;
 		case 10:
-			sys.Supend();
+			sys.handleCommand(new Suspend());
 			break;
 		case 11:
-			sys.Resume();
+			sys.handleCommand(new Resume());
 			break;
 		case 12:
-			sys.chMode();
+			sys.handleCommand(new chMode());
 			break;
 		case 13:
-			sys.ConfigX();
+			sys.handleCommand(new ConfigX());
 			break;
 		case 14:
-			sys.eventX();
+			sys.handleCommand(new eventX());
 			break;
 		case 15:
-			sys.eventY();
+			sys.handleCommand(new eventY());
 			break;
 		default:
 			cout << "Input: " << i << " does not have any function." << endl;
 			break;
 		}
-		
 	}
 	return 0;
 }

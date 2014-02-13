@@ -1,8 +1,6 @@
 #pragma once
 #include "embeddedsystemxstate.h"
 
-//using namespace std;
-
 class PowerOnSelfTest :
 	public EmbeddedSystemXState
 {

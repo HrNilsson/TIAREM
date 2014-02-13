@@ -4,9 +4,10 @@ class RealTimeLoop :
 	public Operational
 {
 public:
-	RealTimeLoop(void);
-	~RealTimeLoop(void);
+	virtual ~RealTimeLoop(void);
 	void Suspend(EmbeddedSystemX* sys) override;
 	void Stop(EmbeddedSystemX* sys) override;
+protected:
+	RealTimeLoop(void);
 };
 

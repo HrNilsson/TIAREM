@@ -4,8 +4,9 @@ class Operational :
 	public EmbeddedSystemXState
 {
 public:
-	Operational(void);
-	~Operational(void);
+	virtual ~Operational(void);
 	void Restart(EmbeddedSystemX* sys) override;
+protected:
+	Operational(void);
 };
 

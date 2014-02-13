@@ -79,10 +79,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="chMode.h" />
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Configuration.h" />
+    <ClInclude Include="ConfigurationEnded.h" />
+    <ClInclude Include="Configure.h" />
+    <ClInclude Include="ConfigX.h" />
     <ClInclude Include="EmbeddedSystemX.h" />
     <ClInclude Include="EmbeddedSystemXState.h" />
+    <ClInclude Include="eventX.h" />
+    <ClInclude Include="eventY.h" />
+    <ClInclude Include="Exit.h" />
     <ClInclude Include="Failure.h" />
+    <ClInclude Include="Initialized.h" />
     <ClInclude Include="Initializing.h" />
     <ClInclude Include="Mode1.h" />
     <ClInclude Include="Mode2.h" />
@@ -91,16 +100,32 @@
     <ClInclude Include="PowerOnSelfTest.h" />
     <ClInclude Include="Ready.h" />
     <ClInclude Include="RealTimeLoop.h" />
+    <ClInclude Include="Restart.h" />
+    <ClInclude Include="Resume.h" />
+    <ClInclude Include="SelfTestFailed.h" />
+    <ClInclude Include="SelfTestOk.h" />
+    <ClInclude Include="Start.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Stop.h" />
+    <ClInclude Include="Suspend.h" />
     <ClInclude Include="Suspended.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="chMode.cpp" />
+    <ClCompile Include="Command.cpp" />
     <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="ConfigurationEnded.cpp" />
+    <ClCompile Include="Configure.cpp" />
+    <ClCompile Include="ConfigX.cpp" />
     <ClCompile Include="EmbeddedSystemX.cpp" />
     <ClCompile Include="EmbeddedSystemXState.cpp" />
+    <ClCompile Include="eventX.cpp" />
+    <ClCompile Include="eventY.cpp" />
+    <ClCompile Include="Exit.cpp" />
     <ClCompile Include="Failure.cpp" />
     <ClCompile Include="Generic State Machine.cpp" />
+    <ClCompile Include="Initialized.cpp" />
     <ClCompile Include="Initializing.cpp" />
     <ClCompile Include="Mode1.cpp" />
     <ClCompile Include="Mode2.cpp" />
@@ -109,10 +134,17 @@
     <ClCompile Include="PowerOnSelfTest.cpp" />
     <ClCompile Include="Ready.cpp" />
     <ClCompile Include="RealTimeLoop.cpp" />
+    <ClCompile Include="Restart.cpp" />
+    <ClCompile Include="Resume.cpp" />
+    <ClCompile Include="SelfTestFailed.cpp" />
+    <ClCompile Include="SelfTestOk.cpp" />
+    <ClCompile Include="Start.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Stop.cpp" />
+    <ClCompile Include="Suspend.cpp" />
     <ClCompile Include="Suspended.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
