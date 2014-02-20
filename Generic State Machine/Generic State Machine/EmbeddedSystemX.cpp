@@ -18,6 +18,7 @@ EmbeddedSystemX::~EmbeddedSystemX(void)
 void EmbeddedSystemX::handleCommand(Command* pCmd)
 {
 	pCmd->execute(this, _state);
+	delete pCmd;
 }
 
 
