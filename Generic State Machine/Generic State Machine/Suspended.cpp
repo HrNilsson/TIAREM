@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Suspended.h"
 #include "Ready.h"
-#include "Mode1.h"
+#include "RealTimeLoop.h"
 
 Suspended* Suspended::_instance = 0;
 
@@ -26,7 +26,7 @@ Suspended::~Suspended(void)
 
 void Suspended::Resume(EmbeddedSystemX* sys)
 {
-	ChangeState(sys, Mode1::Instance());
+	ChangeState(sys, RealTimeLoop::Instance());
 }
 
 

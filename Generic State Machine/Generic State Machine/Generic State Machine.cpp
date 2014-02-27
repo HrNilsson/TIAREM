@@ -19,6 +19,8 @@
 #include "Start.h"
 #include "Stop.h"
 #include "Suspend.h"
+#include "Simulate.h"
+#include "RunRealTime.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -39,7 +41,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << "12 - chMode" << endl;
 	cout << "13 - ConfigX" << endl;
 	cout << "14 - eventX" << endl;
-	cout << "15 - eventY" << endl << endl;
+	cout << "15 - eventY" << endl;
+	cout << "16 - Simulate" << endl;
+	cout << "17 - RunRealTime" << endl;
 
 	EmbeddedSystemX sys = EmbeddedSystemX();
 
@@ -97,6 +101,12 @@ int _tmain(int argc, _TCHAR* argv[])
 			break;
 		case 15:
 			sys.handleCommand(new eventY());
+			break;
+		case 16:
+			sys.handleCommand(new Simulate());
+			break;
+		case 17:
+			sys.handleCommand(new RunRealTime());
 			break;
 		default:
 			cout << "Input: " << i << " does not have any function." << endl;

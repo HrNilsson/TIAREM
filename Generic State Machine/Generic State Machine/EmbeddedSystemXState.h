@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "EmbeddedSystemX.h"
 
 class EmbeddedSystemXState
@@ -22,10 +21,14 @@ public:
 	virtual void SelfTestOk(EmbeddedSystemX* sys);
 	virtual void SelfTestFailed(EmbeddedSystemX* sys, int ErrorNo);
 	virtual void entry(EmbeddedSystemX* sys);
+	virtual void Simulate(EmbeddedSystemX* sys);
+	virtual void RunRealTime(EmbeddedSystemX* sys);
 private:
 	void defaultBehavior(EmbeddedSystemX* sys);
 protected:
 	EmbeddedSystemXState(void);
-	void ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState*);
+	void ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState* pS);
+	void ChangeState(EmbeddedSystemX* sys, ApplicationModeSetting* pS);
+	void ChangeState(EmbeddedSystemX* sys, SimulateRealTimeModeState* pS);
 };
 

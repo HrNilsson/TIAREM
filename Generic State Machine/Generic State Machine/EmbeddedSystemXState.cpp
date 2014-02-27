@@ -91,7 +91,27 @@ void EmbeddedSystemXState::entry(EmbeddedSystemX* sys)
 	
 }
 
+void EmbeddedSystemXState::RunRealTime(EmbeddedSystemX* sys)
+{
+	defaultBehavior(sys);
+}
+
+void EmbeddedSystemXState::Simulate(EmbeddedSystemX* sys)
+{
+	defaultBehavior(sys);
+}
+
 void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState* pS)
+{
+	sys->ChangeState(pS);
+}
+
+void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, ApplicationModeSetting* pS)
+{
+	sys->ChangeState(pS);
+}
+
+void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, SimulateRealTimeModeState* pS)
 {
 	sys->ChangeState(pS);
 }

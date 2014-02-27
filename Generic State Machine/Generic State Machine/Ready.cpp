@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Ready.h"
-#include "Mode1.h"
+#include "RealTimeLoop.h"
 #include "Configuration.h"
 
 Ready* Ready::_instance = 0;
@@ -32,7 +32,7 @@ void Ready::Configure(EmbeddedSystemX* sys)
 
 void Ready::Start(EmbeddedSystemX* sys)
 {
-	ChangeState(sys, Mode1::Instance());
+	ChangeState(sys, RealTimeLoop::Instance());
 }
 
 void Ready::entry(EmbeddedSystemX* sys)

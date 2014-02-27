@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ApplicationModeSetting.h" />
     <ClInclude Include="chMode.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="Configuration.h" />
@@ -99,11 +100,16 @@
     <ClInclude Include="Operational.h" />
     <ClInclude Include="PowerOnSelfTest.h" />
     <ClInclude Include="Ready.h" />
+    <ClInclude Include="RealTimeExecution.h" />
     <ClInclude Include="RealTimeLoop.h" />
     <ClInclude Include="Restart.h" />
     <ClInclude Include="Resume.h" />
+    <ClInclude Include="RunRealTime.h" />
     <ClInclude Include="SelfTestFailed.h" />
     <ClInclude Include="SelfTestOk.h" />
+    <ClInclude Include="Simulate.h" />
+    <ClInclude Include="SimulateRealTimeModeState.h" />
+    <ClInclude Include="Simulation.h" />
     <ClInclude Include="Start.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stop.h" />
@@ -112,6 +118,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ApplicationModeSetting.cpp" />
     <ClCompile Include="chMode.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Configuration.cpp" />
@@ -133,11 +140,16 @@
     <ClCompile Include="Operational.cpp" />
     <ClCompile Include="PowerOnSelfTest.cpp" />
     <ClCompile Include="Ready.cpp" />
+    <ClCompile Include="RealTimeExecution.cpp" />
     <ClCompile Include="RealTimeLoop.cpp" />
     <ClCompile Include="Restart.cpp" />
     <ClCompile Include="Resume.cpp" />
+    <ClCompile Include="RunRealTime.cpp" />
     <ClCompile Include="SelfTestFailed.cpp" />
     <ClCompile Include="SelfTestOk.cpp" />
+    <ClCompile Include="Simulate.cpp" />
+    <ClCompile Include="SimulateRealTimeModeState.cpp" />
+    <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="Start.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

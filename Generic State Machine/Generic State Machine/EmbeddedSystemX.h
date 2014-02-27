@@ -23,11 +23,24 @@ public:
 	void responseM3eventX(void);
 
 	void exitStateMachine(void);
+
 private:
 	friend class EmbeddedSystemXState;
+	friend class ApplicationModeSetting;
+	friend class SimulateRealTimeModeState;
+	
 	void ChangeState(EmbeddedSystemXState*);
+	void ChangeState(ApplicationModeSetting*);
+	void ChangeState(SimulateRealTimeModeState*);
+
 	EmbeddedSystemXState* _state;
+	ApplicationModeSetting* _pAppSubState;
+	SimulateRealTimeModeState* _pSimSubState;
+	
 	int VersionNo;
 	char* Name;
+public:
+	ApplicationModeSetting* getStateApp(void);
+	SimulateRealTimeModeState* getStateSim(void);
 };
 

@@ -1,7 +1,9 @@
 #pragma once
-#include "realtimeloop.h"
+#include "ApplicationModeSetting.h"
+#include "EmbeddedSystemX.h"
+
 class Mode2 :
-	public RealTimeLoop
+	public ApplicationModeSetting
 {
 public:
 	static Mode2* Instance();

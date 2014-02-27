@@ -1,8 +1,14 @@
 #include "stdafx.h"
+#include <iostream>
 #include "EmbeddedSystemX.h"
 #include "PowerOnSelfTest.h"
+#include "Mode1.h"
+#include "Simulation.h"
+
 
 EmbeddedSystemXState* _state;
+ApplicationModeSetting* _pAppSubState;
+SimulateRealTimeModeState* _pSimSubState;
 
 EmbeddedSystemX::EmbeddedSystemX(void)
 {
@@ -26,6 +32,28 @@ void EmbeddedSystemX::ChangeState(EmbeddedSystemXState* pSys)
 {
 	_state = pSys;
 	_state->entry(this);
+}
+
+void EmbeddedSystemX::ChangeState(ApplicationModeSetting* pSys)
+{
+	_pAppSubState = pSys;
+	_pAppSubState->entry(this);
+}
+
+void EmbeddedSystemX::ChangeState(SimulateRealTimeModeState* pSys)
+{
+	_pSimSubState = pSys;
+	_pSimSubState->entry(this);
+}
+
+ApplicationModeSetting* EmbeddedSystemX::getStateApp(void)
+{
+	return _pAppSubState;
+}
+
+SimulateRealTimeModeState* EmbeddedSystemX::getStateSim(void)
+{
+	return _pSimSubState;
 }
 
 void EmbeddedSystemX::display(int ErrorNo)
