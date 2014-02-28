@@ -1,35 +1,40 @@
 #include "stdafx.h"
 #include "Failure.h"
 #include "PowerOnSelfTest.h"
-
-Failure* Failure::_instance = 0;
-
-Failure* Failure::Instance(void)
+namespace Application
 {
-	if (_instance == 0)
+	namespace DiscreteProcessing
 	{
-		_instance = new Failure;
+		Failure* Failure::_instance = 0;
+
+		Failure* Failure::Instance(void)
+		{
+			if (_instance == 0)
+			{
+				_instance = new Failure;
+			}
+			return _instance;
+		}
+
+		Failure::Failure(void)
+		{
+		}
+
+
+		Failure::~Failure(void)
+		{
+		}
+
+
+		void Failure::Exit(EmbeddedSystemX* sys)
+		{
+			sys->exitStateMachine();
+		}
+
+
+		void Failure::Restart(EmbeddedSystemX* sys)
+		{
+			ChangeState(sys, PowerOnSelfTest::Instance());
+		}
 	}
-	return _instance;
-}
-
-Failure::Failure(void)
-{
-}
-
-
-Failure::~Failure(void)
-{
-}
-
-
-void Failure::Exit(EmbeddedSystemX* sys)
-{
-	sys->exitStateMachine();
-}
-
-
-void Failure::Restart(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, PowerOnSelfTest::Instance());
 }

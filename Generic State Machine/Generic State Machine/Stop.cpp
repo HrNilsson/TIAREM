@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "Stop.h"
 #include "EmbeddedSystemXState.h"
-
-Stop::Stop()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		Stop::Stop()
+		{
+		}
 
 
-Stop::~Stop()
-{
-}
+		Stop::~Stop()
+		{
+		}
 
 
-void Stop::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->Stop(sys);
+		void Stop::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->Stop(sys);
+		}
+	}
 }

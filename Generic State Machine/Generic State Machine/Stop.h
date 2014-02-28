@@ -1,11 +1,17 @@
 #pragma once
 #include "Command.h"
-class Stop :
-	public Command
+namespace Application
 {
-public:
-	Stop();
-	~Stop();
-	void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
-};
+	namespace DiscreteProcessing
+	{
+		class Stop :
+			public Command
+		{
+		public:
+			Stop();
+			~Stop();
+			void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
+		};
 
+	}
+}

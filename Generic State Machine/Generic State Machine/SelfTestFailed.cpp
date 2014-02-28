@@ -1,19 +1,24 @@
 #include "stdafx.h"
 #include "SelfTestFailed.h"
 #include "EmbeddedSystemXState.h"
-
-SelfTestFailed::SelfTestFailed(int ErrorNo)
+namespace Application
 {
-	this->ErrorNo = ErrorNo;
-}
+	namespace DiscreteProcessing
+	{
+		SelfTestFailed::SelfTestFailed(int ErrorNo)
+		{
+			this->ErrorNo = ErrorNo;
+		}
 
 
-SelfTestFailed::~SelfTestFailed()
-{
-}
+		SelfTestFailed::~SelfTestFailed()
+		{
+		}
 
 
-void SelfTestFailed::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->SelfTestFailed(sys, ErrorNo);
+		void SelfTestFailed::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->SelfTestFailed(sys, ErrorNo);
+		}
+	}
 }

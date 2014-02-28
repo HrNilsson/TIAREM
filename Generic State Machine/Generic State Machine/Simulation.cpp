@@ -1,35 +1,40 @@
 #include "stdafx.h"
 #include "Simulation.h"
 #include "RealTimeExecution.h"
-
-Simulation* Simulation::_instance = 0;
-
-Simulation* Simulation::Instance(void)
+namespace Application
 {
-	if (_instance == 0)
+	namespace DiscreteProcessing
 	{
-		_instance = new Simulation();
+		Simulation* Simulation::_instance = 0;
+
+		Simulation* Simulation::Instance(void)
+		{
+			if (_instance == 0)
+			{
+				_instance = new Simulation();
+			}
+			return _instance;
+		}
+
+		Simulation::Simulation()
+		{
+		}
+
+
+		Simulation::~Simulation()
+		{
+		}
+
+
+		void Simulation::RunRealTime(EmbeddedSystemX* sys)
+		{
+			ChangeState(sys, RealTimeExecution::Instance());
+		}
+
+
+		void Simulation::entry(EmbeddedSystemX* sys)
+		{
+			sys->display("Simulation state entered.");
+		}
 	}
-	return _instance;
-}
-
-Simulation::Simulation()
-{
-}
-
-
-Simulation::~Simulation()
-{
-}
-
-
-void Simulation::RunRealTime(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, RealTimeExecution::Instance());
-}
-
-
-void Simulation::entry(EmbeddedSystemX* sys)
-{
-	sys->display("Simulation state entered.");
 }

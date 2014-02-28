@@ -1,11 +1,16 @@
 #pragma once
-
-class Command
+namespace Application
 {
-public:
-	virtual ~Command();
-	virtual void execute(class EmbeddedSystemX* sys, class EmbeddedSystemXState* state);
-protected:
-	Command();
-};
+	namespace DiscreteProcessing
+	{
+		class Command
+		{
+		public:
+			virtual ~Command();
+			virtual void execute(class EmbeddedSystemX* sys, class EmbeddedSystemXState* state);
+		protected:
+			Command();
+		};
 
+	}
+}

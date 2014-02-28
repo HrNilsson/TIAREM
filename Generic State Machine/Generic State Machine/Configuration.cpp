@@ -1,42 +1,47 @@
 #include "stdafx.h"
 #include "Configuration.h"
 #include "Ready.h"
-
-Configuration* Configuration::_instance = 0;
-
-Configuration* Configuration::Instance(void)
+namespace Application
 {
-	if (_instance == 0)
+	namespace DiscreteProcessing
 	{
-		_instance = new Configuration;
+		Configuration* Configuration::_instance = 0;
+
+		Configuration* Configuration::Instance(void)
+		{
+			if (_instance == 0)
+			{
+				_instance = new Configuration;
+			}
+			return _instance;
+		}
+
+		Configuration::Configuration(void)
+		{
+		}
+
+
+		Configuration::~Configuration(void)
+		{
+		}
+
+
+		void Configuration::ConfigurationEnded(EmbeddedSystemX* sys)
+		{
+			ChangeState(sys, Ready::Instance());
+		}
+
+
+		void Configuration::ConfigX(EmbeddedSystemX* sys)
+		{
+			sys->PerformConfigurationX();
+		}
+
+
+		void Configuration::entry(EmbeddedSystemX* sys)
+		{
+			sys->display("Configuration state entered.");
+			sys->readConfigurationInfo();
+		}
 	}
-	return _instance;
-}
-
-Configuration::Configuration(void)
-{
-}
-
-
-Configuration::~Configuration(void)
-{
-}
-
-
-void Configuration::ConfigurationEnded(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, Ready::Instance());
-}
-
-
-void Configuration::ConfigX(EmbeddedSystemX* sys)
-{
-	sys->PerformConfigurationX();
-}
-
-
-void Configuration::entry(EmbeddedSystemX* sys)
-{
-	sys->display("Configuration state entered.");
-	sys->readConfigurationInfo();
 }

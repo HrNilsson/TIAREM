@@ -1,122 +1,127 @@
 #include "stdafx.h"
 #include "EmbeddedSystemXState.h"
-
-
-EmbeddedSystemXState::EmbeddedSystemXState(void)
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+
+		EmbeddedSystemXState::EmbeddedSystemXState(void)
+		{
+		}
 
 
-EmbeddedSystemXState::~EmbeddedSystemXState(void)
-{
-}
+		EmbeddedSystemXState::~EmbeddedSystemXState(void)
+		{
+		}
 
-void EmbeddedSystemXState::Initialized(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Initialized(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::Restart(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Restart(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::Configure(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Configure(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::ConfigurationEnded(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::ConfigurationEnded(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::Exit(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Exit(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::Stop(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Stop(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::Start(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Start(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::Suspend(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Suspend(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::Resume(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::Resume(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::ConfigX(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::ConfigX(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::chMode(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::chMode(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::eventX(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::eventX(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::eventY(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::eventY(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::SelfTestOk(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::SelfTestOk(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::SelfTestFailed(EmbeddedSystemX* sys, int ErrorNo)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::SelfTestFailed(EmbeddedSystemX* sys, int ErrorNo)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::entry(EmbeddedSystemX* sys)
-{
-	
-}
+		void EmbeddedSystemXState::entry(EmbeddedSystemX* sys)
+		{
 
-void EmbeddedSystemXState::RunRealTime(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		}
 
-void EmbeddedSystemXState::Simulate(EmbeddedSystemX* sys)
-{
-	defaultBehavior(sys);
-}
+		void EmbeddedSystemXState::RunRealTime(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState* pS)
-{
-	sys->ChangeState(pS);
-}
+		void EmbeddedSystemXState::Simulate(EmbeddedSystemX* sys)
+		{
+			defaultBehavior(sys);
+		}
 
-void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, ApplicationModeSetting* pS)
-{
-	sys->ChangeState(pS);
-}
+		void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, EmbeddedSystemXState* pS)
+		{
+			sys->ChangeState(pS);
+		}
 
-void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, SimulateRealTimeModeState* pS)
-{
-	sys->ChangeState(pS);
-}
+		void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, ApplicationModeSetting* pS)
+		{
+			sys->ChangeState(pS);
+		}
 
-void EmbeddedSystemXState::defaultBehavior(EmbeddedSystemX* sys)
-{
-	sys->display("The action is not defined in this state.");
+		void EmbeddedSystemXState::ChangeState(EmbeddedSystemX* sys, SimulateRealTimeModeState* pS)
+		{
+			sys->ChangeState(pS);
+		}
+
+		void EmbeddedSystemXState::defaultBehavior(EmbeddedSystemX* sys)
+		{
+			sys->display("The action is not defined in this state.");
+		}
+	}
 }

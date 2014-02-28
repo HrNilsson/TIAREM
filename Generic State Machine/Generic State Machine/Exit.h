@@ -1,11 +1,17 @@
 #pragma once
 #include "Command.h"
-class Exit :
-	public Command
+namespace Application
 {
-public:
-	Exit();
-	~Exit();
-	void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
-};
+	namespace DiscreteProcessing
+	{
+		class Exit :
+			public Command
+		{
+		public:
+			Exit();
+			~Exit();
+			void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
+		};
 
+	}
+}

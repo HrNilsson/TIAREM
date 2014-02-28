@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "Restart.h"
 #include "EmbeddedSystemXState.h"
-
-Restart::Restart()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		Restart::Restart()
+		{
+		}
 
 
-Restart::~Restart()
-{
-}
+		Restart::~Restart()
+		{
+		}
 
 
-void Restart::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->Restart(sys);
+		void Restart::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->Restart(sys);
+		}
+	}
 }

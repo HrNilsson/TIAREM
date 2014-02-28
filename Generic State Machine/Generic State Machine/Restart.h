@@ -1,11 +1,17 @@
 #pragma once
 #include "Command.h"
-class Restart :
-	public Command
+namespace Application
 {
-public:
-	Restart();
-	~Restart();
-	void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
-};
+	namespace DiscreteProcessing
+	{
+		class Restart :
+			public Command
+		{
+		public:
+			Restart();
+			~Restart();
+			void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
+		};
 
+	}
+}

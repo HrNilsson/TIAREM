@@ -1,12 +1,18 @@
 #pragma once
 #include "embeddedsystemxstate.h"
-class Operational :
-	public EmbeddedSystemXState
+namespace Application
 {
-public:
-	virtual ~Operational(void);
-	void Restart(EmbeddedSystemX* sys) override;
-protected:
-	Operational(void);
-};
+	namespace DiscreteProcessing
+	{
+		class Operational :
+			public EmbeddedSystemXState
+		{
+		public:
+			virtual ~Operational(void);
+			void Restart(EmbeddedSystemX* sys) override;
+		protected:
+			Operational(void);
+		};
 
+	}
+}

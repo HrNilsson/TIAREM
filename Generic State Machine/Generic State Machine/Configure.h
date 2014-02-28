@@ -1,11 +1,17 @@
 #pragma once
 #include "Command.h"
-class Configure :
-	public Command
+namespace Application
 {
-public:
-	Configure();
-	~Configure();
-	void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
-};
+	namespace DiscreteProcessing
+	{
+		class Configure :
+			public Command
+		{
+		public:
+			Configure();
+			~Configure();
+			void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
+		};
 
+	}
+}

@@ -1,11 +1,17 @@
 #pragma once
 #include "Command.h"
-class RunRealTime :
-	public Command
+namespace Application
 {
-public:
-	RunRealTime();
-	~RunRealTime();
-	void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
-};
+	namespace DiscreteProcessing
+	{
+		class RunRealTime :
+			public Command
+		{
+		public:
+			RunRealTime();
+			~RunRealTime();
+			void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
+		};
 
+	}
+}

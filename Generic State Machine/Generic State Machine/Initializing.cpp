@@ -1,37 +1,42 @@
 #include "stdafx.h"
 #include "Initializing.h"
 #include "Ready.h"
-
-Initializing* Initializing::_instance = 0;
-
-Initializing* Initializing::Instance(void)
+namespace Application
 {
-	if (_instance == 0)
+	namespace DiscreteProcessing
 	{
-		_instance = new Initializing;
+		Initializing* Initializing::_instance = 0;
+
+		Initializing* Initializing::Instance(void)
+		{
+			if (_instance == 0)
+			{
+				_instance = new Initializing;
+			}
+			return _instance;
+		}
+
+		Initializing::Initializing(void)
+		{
+		}
+
+
+		Initializing::~Initializing(void)
+		{
+		}
+
+
+		void Initializing::Initialized(EmbeddedSystemX* sys)
+		{
+			ChangeState(sys, Ready::Instance());
+		}
+
+
+		void Initializing::entry(EmbeddedSystemX* sys)
+		{
+			sys->display("Initializing state entered.");
+			sys->startInitializing();
+		}
+
 	}
-	return _instance;
 }
-
-Initializing::Initializing(void)
-{
-}
-
-
-Initializing::~Initializing(void)
-{
-}
-
-
-void Initializing::Initialized(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, Ready::Instance());
-}
-
-
-void Initializing::entry(EmbeddedSystemX* sys)
-{
-	sys->display("Initializing state entered.");
-	sys->startInitializing();
-}
-

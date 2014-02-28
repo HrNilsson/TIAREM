@@ -1,17 +1,22 @@
 #include "stdafx.h"
 #include "RunRealTime.h"
 #include "EmbeddedSystemXState.h"
-
-RunRealTime::RunRealTime()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		RunRealTime::RunRealTime()
+		{
+		}
 
 
-RunRealTime::~RunRealTime()
-{
-}
+		RunRealTime::~RunRealTime()
+		{
+		}
 
-void RunRealTime::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->RunRealTime(sys);
+		void RunRealTime::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->RunRealTime(sys);
+		}
+	}
 }

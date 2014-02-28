@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "eventY.h"
 #include "EmbeddedSystemXState.h"
-
-eventY::eventY()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		eventY::eventY()
+		{
+		}
 
 
-eventY::~eventY()
-{
-}
+		eventY::~eventY()
+		{
+		}
 
 
-void eventY::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->eventY(sys);
+		void eventY::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->eventY(sys);
+		}
+	}
 }

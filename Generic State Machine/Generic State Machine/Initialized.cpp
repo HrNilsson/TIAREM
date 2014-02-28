@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "Initialized.h"
 #include "EmbeddedSystemXState.h"
-
-Initialized::Initialized()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		Initialized::Initialized()
+		{
+		}
 
 
-Initialized::~Initialized()
-{
-}
+		Initialized::~Initialized()
+		{
+		}
 
 
-void Initialized::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->Initialized(sys);
+		void Initialized::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->Initialized(sys);
+		}
+	}
 }

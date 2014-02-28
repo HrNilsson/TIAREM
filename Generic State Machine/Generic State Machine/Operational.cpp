@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "Operational.h"
 #include "PowerOnSelfTest.h"
-
-
-Operational::Operational(void)
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+
+		Operational::Operational(void)
+		{
+		}
 
 
-Operational::~Operational(void)
-{
-}
+		Operational::~Operational(void)
+		{
+		}
 
-void Operational::Restart(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, PowerOnSelfTest::Instance());
+		void Operational::Restart(EmbeddedSystemX* sys)
+		{
+			ChangeState(sys, PowerOnSelfTest::Instance());
+		}
+	}
 }

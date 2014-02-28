@@ -25,6 +25,7 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 	using namespace std;
+	using namespace Application::DiscreteProcessing;
 
 	cout << "The following inputs is allowed :" << endl;
 	cout << "1  - SelfTestOk" << endl;
@@ -50,7 +51,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	while (1)
 	{
 		//Read inputs
-		int i; 
+		int i;
 		cin >> i;
 
 		switch (i)

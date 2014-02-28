@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "Configure.h"
 #include "EmbeddedSystemXState.h"
-
-Configure::Configure()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		Configure::Configure()
+		{
+		}
 
 
-Configure::~Configure()
-{
-}
+		Configure::~Configure()
+		{
+		}
 
 
-void Configure::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->Configure(sys);
+		void Configure::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->Configure(sys);
+		}
+	}
 }

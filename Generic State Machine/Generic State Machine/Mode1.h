@@ -1,19 +1,24 @@
 #pragma once
 #include "ApplicationModeSetting.h"
 #include "EmbeddedSystemX.h"
-
-class Mode1 :
-	public ApplicationModeSetting
+namespace Application
 {
-public:
-	static Mode1* Instance();
-	~Mode1(void);
-	void chMode(EmbeddedSystemX* sys) override;
-	void eventX(EmbeddedSystemX* sys) override;
-	void entry(EmbeddedSystemX* sys) override;
-private:
-	static Mode1* _instance;
-protected:
-	Mode1(void);
-};
+	namespace DiscreteProcessing
+	{
+		class Mode1 :
+			public ApplicationModeSetting
+		{
+		public:
+			static Mode1* Instance();
+			~Mode1(void);
+			void chMode(EmbeddedSystemX* sys) override;
+			void eventX(EmbeddedSystemX* sys) override;
+			void entry(EmbeddedSystemX* sys) override;
+		private:
+			static Mode1* _instance;
+		protected:
+			Mode1(void);
+		};
 
+	}
+}

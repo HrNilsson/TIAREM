@@ -1,11 +1,17 @@
 #pragma once
 #include "Command.h"
-class Resume :
-	public Command
+namespace Application
 {
-public:
-	Resume();
-	~Resume();
-	void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
-};
+	namespace DiscreteProcessing
+	{
+		class Resume :
+			public Command
+		{
+		public:
+			Resume();
+			~Resume();
+			void execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state) override;
+		};
 
+	}
+}

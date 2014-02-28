@@ -1,38 +1,43 @@
 #include "stdafx.h"
 #include "Mode3.h"
 #include "Mode1.h"
-
-Mode3* Mode3::_instance = 0;
-
-Mode3* Mode3::Instance(void)
+namespace Application
 {
-	if (_instance == 0)
+	namespace DiscreteProcessing
 	{
-		_instance = new Mode3;
+		Mode3* Mode3::_instance = 0;
+
+		Mode3* Mode3::Instance(void)
+		{
+			if (_instance == 0)
+			{
+				_instance = new Mode3;
+			}
+			return _instance;
+		}
+
+		Mode3::Mode3(void)
+		{
+		}
+
+
+		Mode3::~Mode3(void)
+		{
+		}
+
+		void Mode3::chMode(EmbeddedSystemX* sys)
+		{
+			ChangeState(sys, Mode1::Instance());
+		}
+
+		void Mode3::eventX(EmbeddedSystemX* sys)
+		{
+			sys->responseM3eventX();
+		}
+
+		void Mode3::entry(EmbeddedSystemX* sys)
+		{
+			sys->display("Mode3 state entered.");
+		}
 	}
-	return _instance;
-}
-
-Mode3::Mode3(void)
-{
-}
-
-
-Mode3::~Mode3(void)
-{
-}
-
-void Mode3::chMode(EmbeddedSystemX* sys)
-{
-	ChangeState(sys, Mode1::Instance());
-}
-
-void Mode3::eventX(EmbeddedSystemX* sys)
-{
-	sys->responseM3eventX();
-}
-
-void Mode3::entry(EmbeddedSystemX* sys)
-{
-	sys->display("Mode3 state entered.");
 }

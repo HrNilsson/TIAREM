@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "Resume.h"
 #include "EmbeddedSystemXState.h"
-
-Resume::Resume()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		Resume::Resume()
+		{
+		}
 
 
-Resume::~Resume()
-{
-}
+		Resume::~Resume()
+		{
+		}
 
 
-void Resume::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->Resume(sys);
+		void Resume::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->Resume(sys);
+		}
+	}
 }

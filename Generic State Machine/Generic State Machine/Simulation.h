@@ -1,17 +1,22 @@
 #pragma once
 #include "SimulateRealTimeModeState.h"
-
-class Simulation :
-	public SimulateRealTimeModeState
+namespace Application
 {
-public:
-	static Simulation* Instance(void);
-	~Simulation();
-	void RunRealTime(EmbeddedSystemX* sys) override;
-	void entry(EmbeddedSystemX* sys) override;
-private:
-	static Simulation* _instance;
-protected:
-	Simulation(void);
-};
+	namespace DiscreteProcessing
+	{
+		class Simulation :
+			public SimulateRealTimeModeState
+		{
+		public:
+			static Simulation* Instance(void);
+			~Simulation();
+			void RunRealTime(EmbeddedSystemX* sys) override;
+			void entry(EmbeddedSystemX* sys) override;
+		private:
+			static Simulation* _instance;
+		protected:
+			Simulation(void);
+		};
 
+	}
+}

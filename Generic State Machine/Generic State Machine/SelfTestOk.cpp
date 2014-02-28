@@ -1,18 +1,23 @@
 #include "stdafx.h"
 #include "SelfTestOk.h"
 #include "EmbeddedSystemXState.h"
-
-SelfTestOk::SelfTestOk()
+namespace Application
 {
-}
+	namespace DiscreteProcessing
+	{
+		SelfTestOk::SelfTestOk()
+		{
+		}
 
 
-SelfTestOk::~SelfTestOk()
-{
-}
+		SelfTestOk::~SelfTestOk()
+		{
+		}
 
 
-void SelfTestOk::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
-{
-	state->SelfTestOk(sys);
+		void SelfTestOk::execute(EmbeddedSystemX* sys, EmbeddedSystemXState* state)
+		{
+			state->SelfTestOk(sys);
+		}
+	}
 }

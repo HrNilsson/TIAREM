@@ -1,17 +1,23 @@
 #pragma once
 #include "operational.h"
-class Configuration :
-	public Operational
+namespace Application
 {
-public:
-	static Configuration* Instance();
-	~Configuration(void);
-	void ConfigurationEnded(EmbeddedSystemX* sys) override;
-	void ConfigX(EmbeddedSystemX* sys) override;
-	void entry(EmbeddedSystemX* sys) override;
-private:
-	static Configuration* _instance;
-protected:
-	Configuration(void);
-};
+	namespace DiscreteProcessing
+	{
+		class Configuration :
+			public Operational
+		{
+		public:
+			static Configuration* Instance();
+			~Configuration(void);
+			void ConfigurationEnded(EmbeddedSystemX* sys) override;
+			void ConfigX(EmbeddedSystemX* sys) override;
+			void entry(EmbeddedSystemX* sys) override;
+		private:
+			static Configuration* _instance;
+		protected:
+			Configuration(void);
+		};
 
+	}
+}
