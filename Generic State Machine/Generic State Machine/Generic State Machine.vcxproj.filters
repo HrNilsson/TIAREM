@@ -37,6 +37,12 @@
     <Filter Include="Source Files\Application\DiscreteProcessing\States">
       <UniqueIdentifier>{9e8c7899-d182-4ef0-b413-3942665848fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Abstract OS">
+      <UniqueIdentifier>{80e1c0c9-c733-447a-91a6-1b069766ba1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Abstract OS">
+      <UniqueIdentifier>{9034c86a-ad37-4b2b-a5d6-2751ada9940d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -153,6 +159,15 @@
     <ClInclude Include="Application\Discrete Processing\EmbeddedSystemX.h">
       <Filter>Header Files\Application\DiscreteProcessing</Filter>
     </ClInclude>
+    <ClInclude Include="Abstract OS\Thread.h">
+      <Filter>Header Files\Abstract OS</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscreteProcessingThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContinuousProcessingThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -265,6 +280,15 @@
     </ClCompile>
     <ClCompile Include="Application\Discrete Processing\EmbeddedSystemX.cpp">
       <Filter>Source Files\Application\DiscreteProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="Abstract OS\Thread.cpp">
+      <Filter>Source Files\Abstract OS</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscreteProcessingThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContinuousProcessingThread.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
