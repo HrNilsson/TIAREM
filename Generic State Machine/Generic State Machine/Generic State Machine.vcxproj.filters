@@ -48,109 +48,109 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\ApplicationModeSetting.h">
+    <ClInclude Include="Application\Discrete Processing\Commands\chMode.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Command.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\ConfigurationEnded.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Configure.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\ConfigX.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\eventX.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\eventY.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Exit.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Initialized.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Restart.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Resume.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\RunRealTime.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\SelfTestFailed.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\SelfTestOk.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Simulate.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Start.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Stop.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\Commands\Suspend.h">
+      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Discrete Processing\States\ApplicationModeSetting.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Configuration.h">
+    <ClInclude Include="Application\Discrete Processing\States\Configuration.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\EmbeddedSystemXState.h">
+    <ClInclude Include="Application\Discrete Processing\States\EmbeddedSystemXState.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Failure.h">
+    <ClInclude Include="Application\Discrete Processing\States\Failure.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Initializing.h">
+    <ClInclude Include="Application\Discrete Processing\States\Initializing.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Mode1.h">
+    <ClInclude Include="Application\Discrete Processing\States\Mode1.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Mode2.h">
+    <ClInclude Include="Application\Discrete Processing\States\Mode2.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Mode3.h">
+    <ClInclude Include="Application\Discrete Processing\States\Mode3.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Operational.h">
+    <ClInclude Include="Application\Discrete Processing\States\Operational.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\PowerOnSelfTest.h">
+    <ClInclude Include="Application\Discrete Processing\States\PowerOnSelfTest.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Ready.h">
+    <ClInclude Include="Application\Discrete Processing\States\Ready.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\RealTimeExecution.h">
+    <ClInclude Include="Application\Discrete Processing\States\RealTimeExecution.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\RealTimeLoop.h">
+    <ClInclude Include="Application\Discrete Processing\States\RealTimeLoop.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\SimulateRealTimeModeState.h">
+    <ClInclude Include="Application\Discrete Processing\States\SimulateRealTimeModeState.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Simulation.h">
+    <ClInclude Include="Application\Discrete Processing\States\Simulation.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\States\Suspended.h">
+    <ClInclude Include="Application\Discrete Processing\States\Suspended.h">
       <Filter>Header Files\Application\DiscreteProcessing\States</Filter>
     </ClInclude>
-    <ClInclude Include="Application\Commands\chMode.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Command.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\ConfigurationEnded.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Configure.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\ConfigX.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\eventX.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\eventY.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Exit.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Initialized.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Restart.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Resume.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\RunRealTime.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\SelfTestFailed.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\SelfTestOk.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Simulate.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Start.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Stop.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\Commands\Suspend.h">
-      <Filter>Header Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="Application\EmbeddedSystemX.h">
+    <ClInclude Include="Application\Discrete Processing\EmbeddedSystemX.h">
       <Filter>Header Files\Application\DiscreteProcessing</Filter>
     </ClInclude>
   </ItemGroup>
@@ -161,109 +161,109 @@
     <ClCompile Include="Generic State Machine.cpp">
       <Filter>Source Files\Application</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\ApplicationModeSetting.cpp">
+    <ClCompile Include="Application\Discrete Processing\Commands\chMode.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Command.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\ConfigurationEnded.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Configure.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\ConfigX.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\eventX.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\eventY.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Exit.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Initialized.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Restart.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Resume.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\RunRealTime.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\SelfTestFailed.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\SelfTestOk.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Simulate.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Start.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Stop.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\Commands\Suspend.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Discrete Processing\States\ApplicationModeSetting.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Configuration.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Configuration.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\EmbeddedSystemXState.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\EmbeddedSystemXState.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Failure.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Failure.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Initializing.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Initializing.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Mode1.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Mode1.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Mode2.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Mode2.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Mode3.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Mode3.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Operational.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Operational.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\PowerOnSelfTest.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\PowerOnSelfTest.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Ready.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Ready.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\RealTimeExecution.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\RealTimeExecution.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\RealTimeLoop.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\RealTimeLoop.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\SimulateRealTimeModeState.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\SimulateRealTimeModeState.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Simulation.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Simulation.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\States\Suspended.cpp">
+    <ClCompile Include="Application\Discrete Processing\States\Suspended.cpp">
       <Filter>Source Files\Application\DiscreteProcessing\States</Filter>
     </ClCompile>
-    <ClCompile Include="Application\Commands\chMode.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Command.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\ConfigurationEnded.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Configure.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\ConfigX.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\eventX.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\eventY.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Exit.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Initialized.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Restart.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Resume.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\RunRealTime.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\SelfTestFailed.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\SelfTestOk.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Simulate.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Start.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Stop.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\Commands\Suspend.cpp">
-      <Filter>Source Files\Application\DiscreteProcessing\Commands</Filter>
-    </ClCompile>
-    <ClCompile Include="Application\EmbeddedSystemX.cpp">
+    <ClCompile Include="Application\Discrete Processing\EmbeddedSystemX.cpp">
       <Filter>Source Files\Application\DiscreteProcessing</Filter>
     </ClCompile>
   </ItemGroup>
