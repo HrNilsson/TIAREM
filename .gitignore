@@ -99,7 +99,6 @@ packages/
 *.opensdf
 *.unsuccessfulbuild
 *.sln.DotSettings
-*.vcxproj.filters
 
 ###### VHDL files ##########
 *.qws
