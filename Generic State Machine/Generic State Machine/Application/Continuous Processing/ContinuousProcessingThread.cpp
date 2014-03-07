@@ -2,7 +2,7 @@
 #include "ContinuousProcessingThread.h"
 
 namespace Application{
-	namespace ContinuousProcessingThread {
+	namespace ContinuousProcessing {
 
 		ContinuousProcessingThread::ContinuousProcessingThread()
 		{

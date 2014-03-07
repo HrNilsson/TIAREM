@@ -2,7 +2,7 @@
 #include "Thread.h"
 
 namespace Application{
-	namespace DiscreteProcessingThread {
+	namespace DiscreteProcessing {
 
 		class DiscreteProcessingThread :
 			public AbstractOS::Thread

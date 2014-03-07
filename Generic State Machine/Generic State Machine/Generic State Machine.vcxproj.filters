@@ -43,6 +43,12 @@
     <Filter Include="Header Files\Abstract OS">
       <UniqueIdentifier>{9034c86a-ad37-4b2b-a5d6-2751ada9940d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Application\ContinuousProcessing">
+      <UniqueIdentifier>{60427b12-5a8d-495a-b479-308ab8c2ac6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application\ContinuousProcessing">
+      <UniqueIdentifier>{295cd773-fc37-472c-aa44-9090e6444a91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -162,11 +168,11 @@
     <ClInclude Include="Abstract OS\Thread.h">
       <Filter>Header Files\Abstract OS</Filter>
     </ClInclude>
-    <ClInclude Include="DiscreteProcessingThread.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Application\Continuous Processing\ContinuousProcessingThread.h">
+      <Filter>Header Files\Application\ContinuousProcessing</Filter>
     </ClInclude>
-    <ClInclude Include="ContinuousProcessingThread.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Application\Discrete Processing\DiscreteProcessingThread.h">
+      <Filter>Header Files\Application\DiscreteProcessing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -284,11 +290,11 @@
     <ClCompile Include="Abstract OS\Thread.cpp">
       <Filter>Source Files\Abstract OS</Filter>
     </ClCompile>
-    <ClCompile Include="DiscreteProcessingThread.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Application\Continuous Processing\ContinuousProcessingThread.cpp">
+      <Filter>Source Files\Application\ContinuousProcessing</Filter>
     </ClCompile>
-    <ClCompile Include="ContinuousProcessingThread.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Application\Discrete Processing\DiscreteProcessingThread.cpp">
+      <Filter>Source Files\Application\DiscreteProcessing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

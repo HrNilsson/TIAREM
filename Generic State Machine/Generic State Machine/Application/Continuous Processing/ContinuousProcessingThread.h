@@ -2,7 +2,7 @@
 #include "Thread.h"
 
 namespace Application{
-	namespace ContinuousProcessingThread {
+	namespace ContinuousProcessing {
 
 		class ContinuousProcessingThread :
 			public AbstractOS::Thread
