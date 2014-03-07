@@ -81,7 +81,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Abstract OS\Thread.h" />
+    <ClInclude Include="Application\Continuous Processing\Algorithm.h" />
     <ClInclude Include="Application\Continuous Processing\ContinuousProcessingThread.h" />
+    <ClInclude Include="Application\Continuous Processing\Input.h" />
+    <ClInclude Include="Application\Continuous Processing\Mode1Algorithm.h" />
+    <ClInclude Include="Application\Continuous Processing\Mode2Algorithm.h" />
+    <ClInclude Include="Application\Continuous Processing\Mode3Algorithm.h" />
+    <ClInclude Include="Application\Continuous Processing\Output.h" />
+    <ClInclude Include="Application\Continuous Processing\RealTimeInput.h" />
+    <ClInclude Include="Application\Continuous Processing\RealTimeOutput.h" />
+    <ClInclude Include="Application\Continuous Processing\SimulatedInput.h" />
+    <ClInclude Include="Application\Continuous Processing\SimulatedOutput.h" />
     <ClInclude Include="Application\Discrete Processing\Commands\chMode.h" />
     <ClInclude Include="Application\Discrete Processing\Commands\Command.h" />
     <ClInclude Include="Application\Discrete Processing\Commands\ConfigurationEnded.h" />
@@ -123,7 +133,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Abstract OS\Thread.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Algorithm.cpp" />
     <ClCompile Include="Application\Continuous Processing\ContinuousProcessingThread.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Input.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Mode1Algorithm.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Mode2Algorithm.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Mode3Algorithm.cpp" />
+    <ClCompile Include="Application\Continuous Processing\Output.cpp" />
+    <ClCompile Include="Application\Continuous Processing\RealTimeInput.cpp" />
+    <ClCompile Include="Application\Continuous Processing\RealTimeOutput.cpp" />
+    <ClCompile Include="Application\Continuous Processing\SimulatedInput.cpp" />
+    <ClCompile Include="Application\Continuous Processing\SimulatedOutput.cpp" />
     <ClCompile Include="Application\Discrete Processing\Commands\chMode.cpp" />
     <ClCompile Include="Application\Discrete Processing\Commands\Command.cpp" />
     <ClCompile Include="Application\Discrete Processing\Commands\ConfigurationEnded.cpp" />
