@@ -3,6 +3,7 @@
 #include "Input.h"
 #include "Output.h"
 #include "Algorithm.h"
+#include "../ProcessingMode.h"
 
 namespace Application{
 	namespace ContinuousProcessing {
@@ -11,18 +12,18 @@ namespace Application{
 			public AbstractOS::Thread
 		{
 		public:
-			ContinuousProcessingThread();
+			ContinuousProcessingThread(ProcessingMode*);
 			~ContinuousProcessingThread();
 			void run(void) override;
-			void stop(void);
-			void setInput(Input*);
-			void setOutput(Output*);
-			void setAlgorithm(Algorithm*);
+			void setInput(void);
+			void setOutput(void);
+			void setAlgorithm(void);
 		private:
 			bool running = true;
-			Input* pInput;
-			Output* pOutput;
-			Algorithm* pAlgorithm;
+			Input *pInput;
+			Output *pOutput;
+			Algorithm *pAlgorithm;
+			ProcessingMode* pProcessingMode;
 		};
 
 	}

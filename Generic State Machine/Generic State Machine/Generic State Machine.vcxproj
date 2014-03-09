@@ -81,6 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Abstract OS\Thread.h" />
+    <ClInclude Include="Abstract OS\Thread_Mutex.h" />
+    <ClInclude Include="Abstract OS\Thread_Mutex_Guard.h" />
     <ClInclude Include="Application\Continuous Processing\Algorithm.h" />
     <ClInclude Include="Application\Continuous Processing\ContinuousProcessingThread.h" />
     <ClInclude Include="Application\Continuous Processing\Input.h" />
@@ -128,11 +130,14 @@
     <ClInclude Include="Application\Discrete Processing\States\SimulateRealTimeModeState.h" />
     <ClInclude Include="Application\Discrete Processing\States\Simulation.h" />
     <ClInclude Include="Application\Discrete Processing\States\Suspended.h" />
+    <ClInclude Include="Application\ProcessingMode.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Abstract OS\Thread.cpp" />
+    <ClCompile Include="Abstract OS\Thread_Mutex.cpp" />
+    <ClCompile Include="Abstract OS\Thread_Mutex_Guard.cpp" />
     <ClCompile Include="Application\Continuous Processing\Algorithm.cpp" />
     <ClCompile Include="Application\Continuous Processing\ContinuousProcessingThread.cpp" />
     <ClCompile Include="Application\Continuous Processing\Input.cpp" />
@@ -180,6 +185,7 @@
     <ClCompile Include="Application\Discrete Processing\States\SimulateRealTimeModeState.cpp" />
     <ClCompile Include="Application\Discrete Processing\States\Simulation.cpp" />
     <ClCompile Include="Application\Discrete Processing\States\Suspended.cpp" />
+    <ClCompile Include="Application\ProcessingMode.cpp" />
     <ClCompile Include="Generic State Machine.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -4,8 +4,9 @@
 namespace Application{
 	namespace ContinuousProcessing {
 
-		ContinuousProcessingThread::ContinuousProcessingThread()
+		ContinuousProcessingThread::ContinuousProcessingThread(ProcessingMode* pMode)
 		{
+			pProcessingMode = pMode;
 		}
 
 
@@ -15,35 +16,33 @@ namespace Application{
 		
 		void ContinuousProcessingThread::run()
 		{
-			running = true;
-
-			while (running)
+			while (pProcessingMode->getRunning())
 			{
+				setInput();
 				pInput->read();
+
+				setAlgorithm();
 				pAlgorithm->execute();
+
+				setOutput();
 				pOutput->outputResult();
 				Sleep(1000);
 			}
 		}
 
-		void ContinuousProcessingThread::stop()
+		void ContinuousProcessingThread::setInput()
 		{
-			running = false;
+			pInput = pProcessingMode->getInput();
 		}
 
-		void ContinuousProcessingThread::setInput(Input* p)
+		void ContinuousProcessingThread::setOutput()
 		{
-			pInput = p;
+			pOutput = pProcessingMode->getOutput();
 		}
 
-		void ContinuousProcessingThread::setOutput(Output* p)
+		void ContinuousProcessingThread::setAlgorithm()
 		{
-			pOutput = p;
-		}
-
-		void ContinuousProcessingThread::setAlgorithm(Algorithm* p)
-		{
-			pAlgorithm = p;
+			pAlgorithm = pProcessingMode->getAlgorithm();
 		}
 
 	}

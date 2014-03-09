@@ -204,6 +204,15 @@
     <ClInclude Include="Application\Continuous Processing\SimulatedOutput.h">
       <Filter>Header Files\Application\ContinuousProcessing</Filter>
     </ClInclude>
+    <ClInclude Include="Abstract OS\Thread_Mutex.h">
+      <Filter>Header Files\Abstract OS</Filter>
+    </ClInclude>
+    <ClInclude Include="Abstract OS\Thread_Mutex_Guard.h">
+      <Filter>Header Files\Abstract OS</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\ProcessingMode.h">
+      <Filter>Header Files\Application</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -355,6 +364,15 @@
     </ClCompile>
     <ClCompile Include="Application\Continuous Processing\SimulatedOutput.cpp">
       <Filter>Source Files\Application\ContinuousProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="Abstract OS\Thread_Mutex.cpp">
+      <Filter>Source Files\Abstract OS</Filter>
+    </ClCompile>
+    <ClCompile Include="Abstract OS\Thread_Mutex_Guard.cpp">
+      <Filter>Source Files\Abstract OS</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\ProcessingMode.cpp">
+      <Filter>Source Files\Application</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
