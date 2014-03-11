@@ -29,6 +29,16 @@ namespace Application
 
 			void exitStateMachine(void);
 
+			enum INPUTOUTPUT
+			{
+				SIMULATED, REALTIME
+			};
+
+			enum ALGORITHM
+			{
+				MODE1, MODE2, MODE3
+			};
+
 		private:
 			friend class EmbeddedSystemXState;
 			friend class ApplicationModeSetting;
@@ -37,6 +47,11 @@ namespace Application
 			void ChangeState(EmbeddedSystemXState*);
 			void ChangeState(ApplicationModeSetting*);
 			void ChangeState(SimulateRealTimeModeState*);
+
+			void SetInput(INPUTOUTPUT);
+			void SetOutput(INPUTOUTPUT);
+			void SetAlgorithm(ALGORITHM);
+
 
 			EmbeddedSystemXState* _state;
 			ApplicationModeSetting* _pAppSubState;
@@ -47,6 +62,8 @@ namespace Application
 		public:
 			ApplicationModeSetting* getStateApp(void);
 			SimulateRealTimeModeState* getStateSim(void);
+			void StartRealTimeThread(void);
+			void StopRealTimeThread(void);
 		};
 
 	}

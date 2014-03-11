@@ -15,7 +15,8 @@ namespace Application
 			virtual void eventY(EmbeddedSystemX* sys);
 		protected:
 			ApplicationModeSetting();
-			void ChangeState(EmbeddedSystemX* sys, ApplicationModeSetting*);
+			void ChangeState(EmbeddedSystemX*, ApplicationModeSetting*);
+			void SetAlgorithm(EmbeddedSystemX*, EmbeddedSystemX::ALGORITHM);
 		};
 
 	}

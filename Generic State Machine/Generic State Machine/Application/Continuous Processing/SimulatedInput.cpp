@@ -17,7 +17,7 @@ namespace Application{
 		void SimulatedInput::read()
 		{
 			using namespace std;
-			cout << "Reading simulated input." << endl;
+			cout << endl << "Reading simulated input." << endl;
 		}
 	}
 }

@@ -17,7 +17,7 @@ namespace Application{
 		void RealTimeInput::read()
 		{
 			using namespace std;
-			cout << "Reading realtime input." << endl;
+			cout << endl << "Reading realtime input." << endl;
 		}
 	}
 }

@@ -4,6 +4,8 @@
 #include "Suspended.h"
 #include "Mode1.h"
 #include "RealTimeExecution.h"
+#include "PowerOnSelfTest.h"
+
 namespace Application
 {
 	namespace DiscreteProcessing
@@ -29,12 +31,20 @@ namespace Application
 
 		void RealTimeLoop::Suspend(EmbeddedSystemX* sys)
 		{
+			sys->StopRealTimeThread();
 			ChangeState(sys, Suspended::Instance());
 		}
 
 		void RealTimeLoop::Stop(EmbeddedSystemX* sys)
 		{
+			sys->StopRealTimeThread();
 			ChangeState(sys, Ready::Instance());
+		}
+
+		void RealTimeLoop::Restart(EmbeddedSystemX* sys)
+		{
+			sys->StopRealTimeThread();
+			ChangeState(sys, PowerOnSelfTest::Instance());
 		}
 
 		void RealTimeLoop::chMode(EmbeddedSystemX* sys)
@@ -65,6 +75,7 @@ namespace Application
 		{
 			ChangeState(sys, Mode1::Instance());
 			ChangeState(sys, RealTimeExecution::Instance());
+			sys->StartRealTimeThread();
 		}
 	}
 }

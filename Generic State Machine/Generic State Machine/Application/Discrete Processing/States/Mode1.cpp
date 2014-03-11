@@ -25,7 +25,7 @@ namespace Application
 		{
 		}
 
-
+		
 		void Mode1::chMode(EmbeddedSystemX* sys)
 		{
 			ChangeState(sys, Mode2::Instance());
@@ -39,7 +39,8 @@ namespace Application
 
 		void Mode1::entry(EmbeddedSystemX* sys)
 		{
-			sys->display("Mode1 state entered.");
+			sys->display("Mode1 state entered."); 
+			SetAlgorithm(sys, EmbeddedSystemX::ALGORITHM::MODE1);
 		}
 	}
 }

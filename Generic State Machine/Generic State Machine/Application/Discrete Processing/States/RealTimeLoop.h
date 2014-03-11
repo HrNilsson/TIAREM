@@ -12,6 +12,7 @@ namespace Application
 			~RealTimeLoop(void);
 			void Suspend(EmbeddedSystemX* sys) override;
 			void Stop(EmbeddedSystemX* sys) override;
+			void Restart(EmbeddedSystemX* sys) override;
 			void chMode(EmbeddedSystemX* sys) override;
 			void Simulate(EmbeddedSystemX* sys) override;
 			void RunRealTime(EmbeddedSystemX* sys) override;

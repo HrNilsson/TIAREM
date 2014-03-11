@@ -18,20 +18,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	DiscreteProcessingThread dThread = DiscreteProcessingThread();
 
-	ProcessingMode processingMode = ProcessingMode();
-	ContinuousProcessingThread cThread = ContinuousProcessingThread(&processingMode);
-
-	Mode1Algorithm alg = Mode1Algorithm();
-	RealTimeInput inp = RealTimeInput();
-	RealTimeOutput out = RealTimeOutput();
-
 	dThread.start();
-	
-	processingMode.setInput(&inp);
-	processingMode.setAlgortihm(&alg);
-	processingMode.setOutput(&out);
-
-	cThread.start();
 	
 	while (1)
 	{

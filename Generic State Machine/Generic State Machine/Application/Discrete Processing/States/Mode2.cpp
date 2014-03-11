@@ -46,6 +46,7 @@ namespace Application
 		void Mode2::entry(EmbeddedSystemX* sys)
 		{
 			sys->display("Mode2 state entered.");
+			SetAlgorithm(sys, EmbeddedSystemX::ALGORITHM::MODE2);
 		}
 	}
 }

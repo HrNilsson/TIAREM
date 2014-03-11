@@ -33,5 +33,15 @@ namespace Application
 		{
 			sys->ChangeState(pS);
 		}
+
+		void SimulateRealTimeModeState::SetInput(EmbeddedSystemX* sys, EmbeddedSystemX::INPUTOUTPUT mode)
+		{
+			sys->SetInput(mode);
+		}
+
+		void SimulateRealTimeModeState::SetOutput(EmbeddedSystemX* sys, EmbeddedSystemX::INPUTOUTPUT mode)
+		{
+			sys->SetOutput(mode);
+		}
 	}
 }

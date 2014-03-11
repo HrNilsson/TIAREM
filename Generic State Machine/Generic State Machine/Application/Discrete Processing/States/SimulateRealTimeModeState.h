@@ -9,12 +9,14 @@ namespace Application
 		{
 		public:
 			virtual ~SimulateRealTimeModeState();
-			virtual void entry(EmbeddedSystemX* sys);
-			virtual void RunRealTime(EmbeddedSystemX* sys);
-			virtual void Simulate(EmbeddedSystemX* sys);
+			virtual void entry(EmbeddedSystemX*);
+			virtual void RunRealTime(EmbeddedSystemX*);
+			virtual void Simulate(EmbeddedSystemX*);
 		protected:
 			SimulateRealTimeModeState();
-			void ChangeState(EmbeddedSystemX* sys, SimulateRealTimeModeState*);
+			void ChangeState(EmbeddedSystemX*, SimulateRealTimeModeState*);
+			void SetInput(EmbeddedSystemX*, EmbeddedSystemX::INPUTOUTPUT);
+			void SetOutput(EmbeddedSystemX*, EmbeddedSystemX::INPUTOUTPUT);
 		};
 
 	}

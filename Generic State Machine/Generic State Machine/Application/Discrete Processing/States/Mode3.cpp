@@ -38,6 +38,7 @@ namespace Application
 		void Mode3::entry(EmbeddedSystemX* sys)
 		{
 			sys->display("Mode3 state entered.");
+			SetAlgorithm(sys, EmbeddedSystemX::ALGORITHM::MODE3);
 		}
 	}
 }

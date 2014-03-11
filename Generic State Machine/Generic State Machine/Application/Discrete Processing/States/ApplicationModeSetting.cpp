@@ -37,5 +37,10 @@ namespace Application
 		{
 			sys->ChangeState(pS);
 		}
+
+		void ApplicationModeSetting::SetAlgorithm(EmbeddedSystemX* sys, EmbeddedSystemX::ALGORITHM mode)
+		{
+			sys->SetAlgorithm(mode);
+		}
 	}
 }

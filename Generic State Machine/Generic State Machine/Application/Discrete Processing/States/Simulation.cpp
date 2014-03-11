@@ -35,6 +35,8 @@ namespace Application
 		void Simulation::entry(EmbeddedSystemX* sys)
 		{
 			sys->display("Simulation state entered.");
+			SetInput(sys, EmbeddedSystemX::INPUTOUTPUT::SIMULATED);
+			SetOutput(sys, EmbeddedSystemX::INPUTOUTPUT::SIMULATED);
 		}
 	}
 }

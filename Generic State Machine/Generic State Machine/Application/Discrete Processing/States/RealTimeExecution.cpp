@@ -35,6 +35,8 @@ namespace Application
 		void RealTimeExecution::entry(EmbeddedSystemX* sys)
 		{
 			sys->display("RealTimeExecution state entered.");
+			SetInput(sys, EmbeddedSystemX::INPUTOUTPUT::REALTIME);
+			SetOutput(sys, EmbeddedSystemX::INPUTOUTPUT::REALTIME);
 		}
 	}
 }
