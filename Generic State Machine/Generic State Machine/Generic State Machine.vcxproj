@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\René Nilsson\Documents\GitHub\TIAREM - Projects\Generic State Machine\Generic State Machine\Application;C:\Users\René Nilsson\Documents\GitHub\TIAREM - Projects\Generic State Machine\Generic State Machine\Abstract OS;C:\Users\René Nilsson\Documents\GitHub\TIAREM - Projects\Generic State Machine\Generic State Machine\Application\Continuous Processing;C:\Users\René Nilsson\Documents\GitHub\TIAREM - Projects\Generic State Machine\Generic State Machine\Application\Discrete Processing;C:\Users\René Nilsson\Documents\GitHub\TIAREM - Projects\Generic State Machine\Generic State Machine\Application\Discrete Processing\States;C:\Users\René Nilsson\Documents\GitHub\TIAREM - Projects\Generic State Machine\Generic State Machine\Application\Discrete Processing\Commands;$(IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath)\Application;$(VC_IncludePath)\Abstract OS;$(VC_IncludePath)\Application\Continuous Processing;$(VC_IncludePath)\Application\Discrete Processing;$(VC_IncludePath)\Application\Discrete Processing\States;$(VC_IncludePath)\Application\Discrete Processing\Commands;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
