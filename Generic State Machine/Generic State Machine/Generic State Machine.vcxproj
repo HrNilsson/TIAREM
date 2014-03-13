@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath)\Application;$(VC_IncludePath)\Abstract OS;$(VC_IncludePath)\Application\Continuous Processing;$(VC_IncludePath)\Application\Discrete Processing;$(VC_IncludePath)\Application\Discrete Processing\States;$(VC_IncludePath)\Application\Discrete Processing\Commands;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\Generic State Machine\Application;$(SolutionDir)\Generic State Machine\Abstract OS;$(SolutionDir)\Generic State Machine\Application\Continuous Processing;$(SolutionDir)\Generic State Machine\Application\Discrete Processing;$(SolutionDir)\Generic State Machine\Application\Discrete Processing\States;$(SolutionDir)\Generic State Machine\Application\Discrete Processing\Commands;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
