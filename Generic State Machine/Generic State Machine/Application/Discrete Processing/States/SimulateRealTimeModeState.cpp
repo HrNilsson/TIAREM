@@ -34,14 +34,14 @@ namespace Application
 			sys->ChangeState(pS);
 		}
 
-		void SimulateRealTimeModeState::SetInput(EmbeddedSystemX* sys, EmbeddedSystemX::INPUTOUTPUT mode)
+		void SimulateRealTimeModeState::SetInput(EmbeddedSystemX* sys, Application::ContinuousProcessing::Input* pIn)
 		{
-			sys->SetInput(mode);
+			sys->SetInput(pIn);
 		}
 
-		void SimulateRealTimeModeState::SetOutput(EmbeddedSystemX* sys, EmbeddedSystemX::INPUTOUTPUT mode)
+		void SimulateRealTimeModeState::SetOutput(EmbeddedSystemX* sys, Application::ContinuousProcessing::Output* pOut)
 		{
-			sys->SetOutput(mode);
+			sys->SetOutput(pOut);
 		}
 	}
 }

@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "Simulation.h"
 #include "RealTimeExecution.h"
+#include "../../Continuous Processing/SimulatedInput.h"
+#include "../../Continuous Processing/SimulatedOutput.h"
+
 namespace Application
 {
 	namespace DiscreteProcessing
@@ -35,8 +38,8 @@ namespace Application
 		void Simulation::entry(EmbeddedSystemX* sys)
 		{
 			sys->display("Simulation state entered.");
-			SetInput(sys, EmbeddedSystemX::INPUTOUTPUT::SIMULATED);
-			SetOutput(sys, EmbeddedSystemX::INPUTOUTPUT::SIMULATED);
+			SetInput(sys, Application::ContinuousProcessing::SimulatedInput::Instance());
+			SetOutput(sys, Application::ContinuousProcessing::SimulatedOutput::Instance());
 		}
 	}
 }

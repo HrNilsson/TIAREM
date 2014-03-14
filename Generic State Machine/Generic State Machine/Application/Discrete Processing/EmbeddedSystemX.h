@@ -1,11 +1,13 @@
 #pragma once
 #include "Command.h"
+#include "../Continuous Processing/Algorithm.h"
+#include "../Continuous Processing/Input.h"
+#include "../Continuous Processing/Output.h"
 
 namespace Application
 {
 	namespace DiscreteProcessing
 	{
-
 		class EmbeddedSystemX
 		{
 		public:
@@ -29,16 +31,6 @@ namespace Application
 
 			void exitStateMachine(void);
 
-			enum INPUTOUTPUT
-			{
-				SIMULATED, REALTIME
-			};
-
-			enum ALGORITHM
-			{
-				MODE1, MODE2, MODE3
-			};
-
 		private:
 			friend class EmbeddedSystemXState;
 			friend class ApplicationModeSetting;
@@ -48,10 +40,9 @@ namespace Application
 			void ChangeState(ApplicationModeSetting*);
 			void ChangeState(SimulateRealTimeModeState*);
 
-			void SetInput(INPUTOUTPUT);
-			void SetOutput(INPUTOUTPUT);
-			void SetAlgorithm(ALGORITHM);
-
+			void SetInput(Application::ContinuousProcessing::Input*);
+			void SetOutput(Application::ContinuousProcessing::Output*);
+			void SetAlgorithm(Application::ContinuousProcessing::Algorithm*);
 
 			EmbeddedSystemXState* _state;
 			ApplicationModeSetting* _pAppSubState;

@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "RealTimeExecution.h"
 #include "Simulation.h"
+#include "../../Continuous Processing/RealTimeInput.h"
+#include "../../Continuous Processing/RealTimeOutput.h"
+
 namespace Application
 {
 	namespace DiscreteProcessing
@@ -35,8 +38,8 @@ namespace Application
 		void RealTimeExecution::entry(EmbeddedSystemX* sys)
 		{
 			sys->display("RealTimeExecution state entered.");
-			SetInput(sys, EmbeddedSystemX::INPUTOUTPUT::REALTIME);
-			SetOutput(sys, EmbeddedSystemX::INPUTOUTPUT::REALTIME);
+			SetInput(sys, Application::ContinuousProcessing::RealTimeInput::Instance());
+			SetOutput(sys, Application::ContinuousProcessing::RealTimeOutput::Instance());
 		}
 	}
 }

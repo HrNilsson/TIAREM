@@ -8,9 +8,13 @@ namespace Application{
 			public Application::ContinuousProcessing::Output
 		{
 		public:
-			SimulatedOutput();
+			static SimulatedOutput* Instance();
 			~SimulatedOutput();
 			void outputResult(void) override;
+		private:
+			static SimulatedOutput* _instance;
+		protected:
+			SimulatedOutput();
 		};
 
 	}

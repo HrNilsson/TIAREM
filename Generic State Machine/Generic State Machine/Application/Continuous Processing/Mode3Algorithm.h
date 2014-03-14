@@ -8,9 +8,13 @@ namespace Application{
 			public Application::ContinuousProcessing::Algorithm
 		{
 		public:
-			Mode3Algorithm();
+			static Mode3Algorithm* Instance();
 			~Mode3Algorithm();
 			void execute(void) override;
+		private:
+			static Mode3Algorithm* _instance;
+		protected:
+			Mode3Algorithm();
 		};
 
 	}

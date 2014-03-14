@@ -1,5 +1,6 @@
 #pragma once
 #include "EmbeddedSystemX.h"
+#include "../../Continuous Processing/Algorithm.h"
 
 namespace Application
 {
@@ -16,7 +17,7 @@ namespace Application
 		protected:
 			ApplicationModeSetting();
 			void ChangeState(EmbeddedSystemX*, ApplicationModeSetting*);
-			void SetAlgorithm(EmbeddedSystemX*, EmbeddedSystemX::ALGORITHM);
+			void SetAlgorithm(EmbeddedSystemX*, Application::ContinuousProcessing::Algorithm*);
 		};
 
 	}

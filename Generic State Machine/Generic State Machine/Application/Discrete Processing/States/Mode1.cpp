@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Mode1.h"
 #include "Mode2.h"
+#include "../../Continuous Processing/Mode1Algorithm.h"
+
 namespace Application
 {
 	namespace DiscreteProcessing
@@ -40,7 +42,7 @@ namespace Application
 		void Mode1::entry(EmbeddedSystemX* sys)
 		{
 			sys->display("Mode1 state entered."); 
-			SetAlgorithm(sys, EmbeddedSystemX::ALGORITHM::MODE1);
+			SetAlgorithm(sys, Application::ContinuousProcessing::Mode1Algorithm::Instance());
 		}
 	}
 }

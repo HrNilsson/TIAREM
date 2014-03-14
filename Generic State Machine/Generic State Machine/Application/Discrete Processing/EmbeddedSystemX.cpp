@@ -25,13 +25,6 @@ namespace Application
 		SimulateRealTimeModeState* _pSimSubState;
 		
 		using namespace ContinuousProcessing;
-		Mode1Algorithm* _pM1A;
-		Mode2Algorithm* _pM2A;
-		Mode3Algorithm* _pM3A;
-		SimulatedInput* _pSI;
-		RealTimeInput* _pRI;
-		SimulatedOutput* _pSO;
-		RealTimeOutput* _pRO;
 
 		ProcessingMode processingMode = ProcessingMode();
 		ContinuousProcessingThread cThread = ContinuousProcessingThread(&processingMode); 
@@ -39,15 +32,16 @@ namespace Application
 
 		EmbeddedSystemX::EmbeddedSystemX(void)
 		{
-			_pM1A = new Mode1Algorithm();
-			_pM2A = new Mode2Algorithm();
-			_pM3A = new Mode3Algorithm();
+			//Create all concrete strategy singletons.
+			Mode1Algorithm::Instance();
+			Mode2Algorithm::Instance();
+			Mode3Algorithm::Instance();
 
-			_pSI = new SimulatedInput();
-			_pRI = new RealTimeInput();
+			SimulatedInput::Instance();
+			RealTimeInput::Instance();
 
-			_pSO = new SimulatedOutput();
-			_pRO = new RealTimeOutput();
+			SimulatedOutput::Instance();
+			RealTimeOutput::Instance();
 
 			_state = PowerOnSelfTest::Instance();
 			_state->entry(this);
@@ -59,16 +53,6 @@ namespace Application
 			delete _state;
 			delete _pAppSubState;
 			delete _pSimSubState;
-
-			delete _pM1A;
-			delete _pM2A;
-			delete _pM3A;
-
-			delete _pSI;
-			delete _pRI;
-
-			delete _pSO;
-			delete _pRO;
 		}
 
 		void EmbeddedSystemX::handleCommand(Command* pCmd)
@@ -96,52 +80,19 @@ namespace Application
 			_pSimSubState->entry(this);
 		}
 
-		void EmbeddedSystemX::SetInput(EmbeddedSystemX::INPUTOUTPUT io)
+		void EmbeddedSystemX::SetInput(Input* in)
 		{
-			switch (io)
-			{
-			case EmbeddedSystemX::INPUTOUTPUT::REALTIME:
-				processingMode.setInput(_pRI);
-				break;
-			case EmbeddedSystemX::INPUTOUTPUT::SIMULATED:
-				processingMode.setInput(_pSI);
-				break;
-			default:
-				break;
-			}
-		
-		}
-		void EmbeddedSystemX::SetOutput(EmbeddedSystemX::INPUTOUTPUT io)
-		{
-			switch (io)
-			{
-			case EmbeddedSystemX::INPUTOUTPUT::REALTIME:
-				processingMode.setOutput(_pRO);
-				break;
-			case EmbeddedSystemX::INPUTOUTPUT::SIMULATED:
-				processingMode.setOutput(_pSO);
-				break;
-			default:
-				break;
-			}
+			processingMode.setInput(in);
 		}
 
-		void EmbeddedSystemX::SetAlgorithm(EmbeddedSystemX::ALGORITHM alg)
+		void EmbeddedSystemX::SetOutput(Output* out)
 		{
-			switch (alg)
-			{
-			case EmbeddedSystemX::ALGORITHM::MODE1:
-				processingMode.setAlgortihm(_pM1A);
-				break;
-			case EmbeddedSystemX::ALGORITHM::MODE2:
-				processingMode.setAlgortihm(_pM2A);
-				break;
-			case EmbeddedSystemX::ALGORITHM::MODE3:
-				processingMode.setAlgortihm(_pM3A);
-				break;
-			default:
-				break;
-			}
+			processingMode.setOutput(out);
+		}
+
+		void EmbeddedSystemX::SetAlgorithm(Algorithm* alg)
+		{
+			processingMode.setAlgortihm(alg);
 		}
 
 		void EmbeddedSystemX::StartRealTimeThread(void)

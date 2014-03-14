@@ -8,9 +8,13 @@ namespace Application{
 			public Application::ContinuousProcessing::Output
 		{
 		public:
-			RealTimeOutput();
+			static RealTimeOutput* Instance();
 			~RealTimeOutput();
 			void outputResult(void) override;
+		private:
+			static RealTimeOutput* _instance;
+		protected:
+			RealTimeOutput();
 		};
 
 	}

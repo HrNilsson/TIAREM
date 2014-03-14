@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "ApplicationModeSetting.h"
+
 namespace Application
 {
 	namespace DiscreteProcessing
@@ -38,9 +39,9 @@ namespace Application
 			sys->ChangeState(pS);
 		}
 
-		void ApplicationModeSetting::SetAlgorithm(EmbeddedSystemX* sys, EmbeddedSystemX::ALGORITHM mode)
+		void ApplicationModeSetting::SetAlgorithm(EmbeddedSystemX* sys, Application::ContinuousProcessing::Algorithm* pAlg)
 		{
-			sys->SetAlgorithm(mode);
+			sys->SetAlgorithm(pAlg);
 		}
 	}
 }

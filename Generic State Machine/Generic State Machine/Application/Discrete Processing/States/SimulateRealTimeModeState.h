@@ -1,5 +1,7 @@
 #pragma once
 #include "EmbeddedSystemX.h"
+#include "../../Continuous Processing/Input.h"
+#include "../../Continuous Processing/Output.h"
 
 namespace Application
 {
@@ -15,8 +17,8 @@ namespace Application
 		protected:
 			SimulateRealTimeModeState();
 			void ChangeState(EmbeddedSystemX*, SimulateRealTimeModeState*);
-			void SetInput(EmbeddedSystemX*, EmbeddedSystemX::INPUTOUTPUT);
-			void SetOutput(EmbeddedSystemX*, EmbeddedSystemX::INPUTOUTPUT);
+			void SetInput(EmbeddedSystemX*, Application::ContinuousProcessing::Input*);
+			void SetOutput(EmbeddedSystemX*, Application::ContinuousProcessing::Output*);
 		};
 
 	}

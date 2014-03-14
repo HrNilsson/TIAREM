@@ -5,6 +5,17 @@
 namespace Application{
 	namespace ContinuousProcessing {
 
+		RealTimeInput* RealTimeInput::_instance = 0;
+
+		RealTimeInput* RealTimeInput::Instance(void)
+		{
+			if (_instance == 0)
+			{
+				_instance = new RealTimeInput;
+			}
+			return _instance;
+		}
+
 		RealTimeInput::RealTimeInput()
 		{
 		}

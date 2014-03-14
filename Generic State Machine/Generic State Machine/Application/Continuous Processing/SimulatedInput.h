@@ -8,9 +8,13 @@ namespace Application{
 			public Application::ContinuousProcessing::Input
 		{
 		public:
-			SimulatedInput();
+			static SimulatedInput* Instance();
 			~SimulatedInput();
 			void read(void) override;
+		private:
+			static SimulatedInput* _instance;
+		protected:
+			SimulatedInput();
 		};
 
 	}

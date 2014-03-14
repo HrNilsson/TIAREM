@@ -5,6 +5,17 @@
 namespace Application{
 	namespace ContinuousProcessing {
 
+		RealTimeOutput* RealTimeOutput::_instance = 0;
+
+		RealTimeOutput* RealTimeOutput::Instance(void)
+		{
+			if (_instance == 0)
+			{
+				_instance = new RealTimeOutput;
+			}
+			return _instance;
+		}
+
 		RealTimeOutput::RealTimeOutput()
 		{
 		}
